@@ -4,3 +4,13 @@
   shuwei.leetcode.cn.addTwoNumber1
 542. 01 矩阵
   shuwei.leetcode.cn.matrix01
+56. 合并区间
+  shuwei.leetcode.cn.five.six 采用新的包命名方式56就是写成five.six
+7. 整数反转
+  shuwei.leetcode.cn.seven
+55. 跳跃游戏
+  shuwei.leetcode.cn.five.five
+11. 盛最多水的容器
+  shuwei.leetcode.cn.one.one
+466. 统计重复个数
+  shuwei.leetcode.cn.four.six.six
