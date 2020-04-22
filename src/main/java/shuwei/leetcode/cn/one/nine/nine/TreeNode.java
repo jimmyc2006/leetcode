@@ -1,4 +1,4 @@
-package shuwei.leetcode.cn.one.one.nine.nine;
+package shuwei.leetcode.cn.one.nine.nine;
 
 /**
  * @author shuwei

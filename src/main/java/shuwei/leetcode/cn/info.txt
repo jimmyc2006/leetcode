@@ -19,4 +19,4 @@
 1248. 统计「优美子数组」
   shuwei.leetcode.cn.one.two.four.eight
 199. 二叉树的右视图
-  shuwei.leetcode.cn.one.one.nine.nine
+  shuwei.leetcode.cn.one.nine.nine
