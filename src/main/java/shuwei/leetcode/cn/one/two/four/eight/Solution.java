@@ -1,8 +1,5 @@
 package shuwei.leetcode.cn.one.two.four.eight;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author shuwei
  * @version 创建时间：2020年4月21日 下午3:51:41 类说明
