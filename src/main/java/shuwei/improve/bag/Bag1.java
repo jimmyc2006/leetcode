@@ -22,6 +22,24 @@ public class Bag1 {
     return data;
   }
 
+  private int[] W = new int[]{0, 2, ,3, 4, 5, 9};
+  private int[] V = new int[]{0, 3, 4, 5, 8, 10};
+
+  // 一围数组的解法
+  public int bagArr(int maxSpace) {
+    int[] dp = new int[maxSpace];
+    for (int i = 0; i <= maxSpace; i++) {
+      for (int j = maxSpace; j > 0; j--) {
+        if (W[i] <= j) {
+          dp[j] = Math.max(dp[j], dp[j - W[i]] + V[i]);
+        } else {
+          dp[j] = dp[j];
+        }
+      }
+    }
+    return dp[maxSpace];
+  }
+
   public int bagPro(Map<Integer, int[]> data, int maxWeight) {
     int[][] result = new int[data.size() + 1][maxWeight + 1];
     for (int i = 1; i <= data.size(); i++) {
