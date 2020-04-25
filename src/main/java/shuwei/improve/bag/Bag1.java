@@ -22,13 +22,28 @@ public class Bag1 {
     return data;
   }
 
-  private int[] W = new int[]{0, 2, ,3, 4, 5, 9};
+  private int[] W = new int[]{0, 2, 3, 4, 5, 9};
   private int[] V = new int[]{0, 3, 4, 5, 8, 10};
 
+  public int bagArrMy(int maxSpace) {
+    int[] dp = new int[maxSpace + 1];
+    for (int i = 1; i < W.length; i++) {
+      for (int j = 1; j <= maxSpace; j++) {
+        if (W[i] <= j) {
+          dp[j] = Math.max(dp[j], dp[j - W[i]] + V[i]);
+        } else {
+          dp[j] = dp[j];
+        }
+      }
+    }
+    return dp[maxSpace];
+  }
+  
   // 一围数组的解法
   public int bagArr(int maxSpace) {
-    int[] dp = new int[maxSpace];
-    for (int i = 0; i <= maxSpace; i++) {
+    int[] dp = new int[maxSpace + 1];
+    
+    for (int i = 0; i < W.length; i++) {
       for (int j = maxSpace; j > 0; j--) {
         if (W[i] <= j) {
           dp[j] = Math.max(dp[j], dp[j - W[i]] + V[i]);
