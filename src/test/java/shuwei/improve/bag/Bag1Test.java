@@ -20,4 +20,11 @@ public class Bag1Test {
     System.out.println(max);
     System.out.println(b.bagPro(init, 20));
   }
+  
+  @Test
+  public void test2() {
+    Bag1 b = new Bag1();
+//    System.out.println(b.bagArr(20));
+    System.out.println(b.bagArrMy(20));
+  }
 }

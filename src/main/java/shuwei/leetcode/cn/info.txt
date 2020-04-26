@@ -24,3 +24,7 @@
   shuwei.leetcode.cn.nine
 面试题 08.11. 硬币
   shuwei.leetcode.cn.mst.yb
+面试题51. 数组中的逆序对
+  shuwei.leetcode.cn.mst.five.one
+46. 全排列
+  shuwei.leetcode.cn.four.six
