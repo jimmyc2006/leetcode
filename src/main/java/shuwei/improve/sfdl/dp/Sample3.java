@@ -14,7 +14,7 @@ import java.util.Map;
 public class Sample3 {
   private int[] p = new int[] {0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30};
   private Map<Integer, Integer> res = new HashMap<>();
-  // 从上到下，带中间结果的保存
+  
   public int cutPod(int n) {
     int[] arr = new int[n];
     res.put(0, 0);
