@@ -32,3 +32,5 @@
   shuwei.leetcode.cn.two.three
 33. 搜索旋转排序数组 ---- 二分查找
   shuwei.leetcode.cn.three.three
+面试题56 - I. 数组中数字出现的次数 ---- 这个题的思路比较特殊,需要记住
+  shuwei.leetcode.cn.mst.five.six
