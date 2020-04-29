@@ -21,14 +21,14 @@ public class Bag2 {
   }
   
   // 完全背包问题
-  // f[i][j] = max(f[i -1 ][j], f[i][j - W[i]] + V[j], f[i][j - 2 * W[i]] + 2 * V[j],...)
+  // f[i][j] = max(f[i -1 ][j], f[i - i][j - W[i]] + V[j], f[i - 1][j - 2 * W[i]] + 2 * V[j],...)
   public int maxValue1(int maxWeight) {
     // 从底向上，二维数组保存
     int[][] data = new int[W.length][maxWeight + 1];
     for (int i = 1; i < W.length ; i++) {
       for (int j = 1; j <= maxWeight; j++) {
         for (int times = 0; j >= times * W[i]; times++) {
-          int currMax = Math.max(data[i - 1][j], data[i][j - times * W[i]] + times * V[i]);
+          int currMax = Math.max(data[i - 1][j], data[i - 1][j - times * W[i]] + times * V[i]);
           if (currMax > data[i][j]) {
             data[i][j] = currMax;
           }
