@@ -36,3 +36,7 @@
   shuwei.leetcode.cn.mst.five.six
 1095. 山脉数组中查找目标值 ---- 二分查找的变形，需要考虑的比较多
   shuwei.leetcode.cn.one.zero.nine.five
+202. 快乐数
+  shuwei.leetcode.cn.one.two.zero.two
+21. 合并两个有序链表
+  shuwei.leetcode.cn.two.one
