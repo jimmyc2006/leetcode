@@ -40,3 +40,9 @@
   shuwei.leetcode.cn.one.two.zero.two
 21. 合并两个有序链表
   shuwei.leetcode.cn.two.one
+3. 无重复字符的最长子串
+  shuwei.leetcode.cn.three
+53. 最大子序和
+  shuwei.leetcode.cn.five.three
+45. 跳跃游戏 II
+  shuwei.leetcode.cn.four.five
