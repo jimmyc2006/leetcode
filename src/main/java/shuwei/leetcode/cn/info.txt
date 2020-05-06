@@ -36,13 +36,17 @@
   shuwei.leetcode.cn.mst.five.six
 1095. 山脉数组中查找目标值 ---- 二分查找的变形，需要考虑的比较多
   shuwei.leetcode.cn.one.zero.nine.five
-202. 快乐数
+202. 快乐数 ---- 简单思路
   shuwei.leetcode.cn.one.two.zero.two
-21. 合并两个有序链表
+21. 合并两个有序链表 ---- 思路
   shuwei.leetcode.cn.two.one
-3. 无重复字符的最长子串
+3. 无重复字符的最长子串 ---- 思路
   shuwei.leetcode.cn.three
-53. 最大子序和
+53. 最大子序和 ---- 思路
   shuwei.leetcode.cn.five.three
-45. 跳跃游戏 II
+45. 跳跃游戏 II ---- 贪心ordp
   shuwei.leetcode.cn.four.five
+98. 验证二叉搜索树
+  shuwei.leetcode.cn.nine.eight
+983. 最低票价 ---- 动态规划dp的思想
+  shuwei.leetcode.cn.nine.eight.three
