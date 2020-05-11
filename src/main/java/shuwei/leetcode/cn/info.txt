@@ -50,5 +50,13 @@
   shuwei.leetcode.cn.nine.eight
 983. 最低票价 ---- 动态规划dp的思想
   shuwei.leetcode.cn.nine.eight.three
-572. 另一个树的子树
+572. 另一个树的子树 ---- 深度优先dfs，kmp
   shuwei.leetcode.cn.five.seven.two
+221. 最大正方形 ---- 动态
+  shuwei.leetcode.cn.two.two.one
+69. x 的平方根 ---- 二分查找
+  shuwei.leetcode.cn.six.nine
+42. 接雨水 ---- 解题方法比较多，动态，栈，双指针
+  shuwei.leetcode.cn.four.two
+236. 二叉树的最近公共祖先 ---- 深度优先搜索加记录路径，后续遍历
+  shuwei.leetcode.cn.two.three.six
