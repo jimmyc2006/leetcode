@@ -60,3 +60,9 @@
   shuwei.leetcode.cn.four.two
 236. 二叉树的最近公共祖先 ---- 深度优先搜索加记录路径，后续遍历
   shuwei.leetcode.cn.two.three.six
+50. Pow(x, n) ---- 思路 + 递归
+  shuwei.leetcode.cn.five.zero
+155. 最小栈 ---- 开始使用Stack+TreeSet,不能支持重复数据的排序，改为TreeMap+Stack性能不佳，看解题思路有，改为双Stack；Stack的特点产生了这个特殊的诀窍
+  shuwei.leetcode.cn.one.five.five
+102. 二叉树的层序遍历 ---- 比较简单的二叉树的BFS
+  shuwei.leetcode.cn.one.zero.two
