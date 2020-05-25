@@ -42,7 +42,7 @@
   shuwei.leetcode.cn.two.one
 3. 无重复字符的最长子串 ---- 思路
   shuwei.leetcode.cn.three
-53. 最大子序和 ---- 思路
+53. 最大子序和 ---- 思路 =====有个DP方法
   shuwei.leetcode.cn.five.three
 45. 跳跃游戏 II ---- 贪心ordp
   shuwei.leetcode.cn.four.five
@@ -66,3 +66,31 @@
   shuwei.leetcode.cn.one.five.five
 102. 二叉树的层序遍历 ---- 比较简单的二叉树的BFS
   shuwei.leetcode.cn.one.zero.two
+19. 删除链表的倒数第N个节点
+  shuwei.leetcode.cn.one.nine
+136. 只出现一次的数字 ---- shuwei.leetcode.cn.mst.five.six类似
+  shuwei.leetcode.cn.one.three.six
+1143. 最长公共子序列 ---- DP
+  shuwei.leetcode.cn.one.one.four.three
+560. 和为K的子数组    ---- 思路
+  shuwei.leetcode.cn.five.six.zero
+25. K 个一组翻转链表 ---- 基于最基础的反转
+  shuwei.leetcode.cn.two.five
+206. 反转链表 ---- 最基础的反转
+  shuwei.leetcode.cn.two.zero.six
+210. 课程表 II ---- 拓扑排序
+  shuwei.leetcode.cn.two.one.zero
+152. 乘积最大子数组
+  shuwei.leetcode.cn.one.five.two
+680. 验证回文字符串 Ⅱ  ---- 思路题，注意边界控制
+  shuwei.leetcode.cn.six.eight.zero
+1371. 每个元音包含偶数次的最长子字符串 ---- 这个题费老大劲了，前缀和，奇偶性
+  shuwei.leetcode.cn.one.three.seven.one
+5. 最长回文子串   ---- 可以使用dp
+  shuwei.leetcode.cn.five
+105. 从前序与中序遍历序列构造二叉树 ---- 思路，活用for循环达到while的目的,理解透彻再看数据想思路
+  shuwei.leetcode.cn.one.zero.five
+76. 最小覆盖子串 ---- 需要看下官方
+  shuwei.leetcode.cn.seven.six
+4. 寻找两个正序数组的中位数 ---- 思路，二分查找相关，这个题需要看官方
+  shuwei.leetcode.cn.four
