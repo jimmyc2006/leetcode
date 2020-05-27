@@ -94,3 +94,9 @@
   shuwei.leetcode.cn.seven.six
 4. 寻找两个正序数组的中位数 ---- 思路，二分查找相关，这个题需要看官方
   shuwei.leetcode.cn.four
+146. LRU缓存机制 ---- 双向链表的实现还是比较简单的，这个题让我对LinkedHashMap有了更好的认识
+  shuwei.leetcode.cn.one.four.six
+974. 和可被 K 整除的子数组
+  shuwei.leetcode.cn.nine.seven.four
+287. 寻找重复数
+  shuwei.leetcode.cn.two.eight.seven

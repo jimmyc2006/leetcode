@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b50bf11-15d1-46c1-80ef-efab0084c075" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/improve/accu/string/Kmp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/improve/dsaj/one/three/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/improve/dsaj/one/three/StackX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/improve/dsaj/one/three/Vertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/improve/dsaj/one/three/Warshall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/five/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/five/six/zero/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/four/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/four/Solution2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/one/five/two/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/one/three/seven/one/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/one/zero/five/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/one/zero/five/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/seven/six/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/six/eight/zero/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/improve/accu/string/KmpTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/five/six/zero/SolutionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/four/SolutionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/four/SolutionTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/one/five/two/SolutionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/one/three/seven/one/SolutionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/one/zero/five/SolutionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/seven/six/SolutionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/six/eight/zero/SolutionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/five/three/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/five/three/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/nine/seven/four/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/two/eight/seven/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCache2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/nine/seven/four/SolutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/two/eight/seven/SolutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCacheTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,8 +19,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/leetcode$SolutionTest_test__1_.ic" NAME="SolutionTest.test (1) Coverage Results" MODIFIED="1590203332703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>shuwei.leetcode.cn.one.zero.five.*</FILTER>
+    <SUITE FILE_PATH="coverage/leetcode$SolutionTest_test__1_.ic" NAME="SolutionTest.test (1) Coverage Results" MODIFIED="1590590795509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>shuwei.leetcode.cn.two.eight.seven.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/leetcode$SolutionTest_test.ic" NAME="SolutionTest.test Coverage Results" MODIFIED="1590301401660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>shuwei.leetcode.cn.four.*</FILTER>
@@ -52,26 +34,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/four/Solution2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+            <state relative-caret-position="342">
+              <caret line="101" column="36" lean-forward="true" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/four/SolutionTest2.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/two/eight/seven/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="43" column="16" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="19" />
+            <state relative-caret-position="277">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/two/eight/seven/SolutionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="10" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,11 +108,18 @@
         <option value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/one/zero/five/Solution.java" />
         <option value="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/seven/six/SolutionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/seven/six/Solution.java" />
-        <option value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt" />
         <option value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/four/Solution.java" />
         <option value="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/four/SolutionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/four/SolutionTest2.java" />
         <option value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/four/Solution2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/shuwei/shuwei/leetcode/cn/one/four/six/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCache.java" />
+        <option value="$PROJECT_DIR$/src/test/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCacheTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/nine/seven/four/SolutionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/nine/seven/four/Solution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/two/eight/seven/Solution.java" />
+        <option value="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/two/eight/seven/SolutionTest.java" />
       </list>
     </option>
   </component>
@@ -145,17 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Local Unit Tests">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="leetcode" type="cbb8eebc:String" user="leetcode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,6 +193,57 @@
               <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shuwei" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="nine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shuwei" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="nine" type="462c0819:PsiDirectoryNode" />
+              <item name="four" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shuwei" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="two" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shuwei" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="two" type="462c0819:PsiDirectoryNode" />
+              <item name="seven" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shuwei" type="462c0819:PsiDirectoryNode" />
+              <item name="six" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -246,6 +278,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shuwei" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="nine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shuwei" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="nine" type="462c0819:PsiDirectoryNode" />
               <item name="four" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -256,6 +299,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shuwei" type="462c0819:PsiDirectoryNode" />
               <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="two" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shuwei" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="two" type="462c0819:PsiDirectoryNode" />
+              <item name="seven" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shuwei" type="462c0819:PsiDirectoryNode" />
               <item name="six" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -273,12 +336,23 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Local Unit Tests">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="leetcode" type="cbb8eebc:String" user="leetcode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590379016717" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590595043756" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/five/six" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -305,7 +379,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SolutionTest2.test2">
+  <component name="RunManager" selected="JUnit.SolutionTest.test (1)">
+    <configuration name="LRUCache" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shuwei.shuwei.leetcode.cn.one.four.six.LRUCache" />
+      <module name="leetcode" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shuwei.shuwei.leetcode.cn.one.four.six.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -329,16 +417,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolutionTest2.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LRUCacheTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="shuwei.leetcode.cn.four.*" />
+          <option name="PATTERN" value="shuwei.shuwei.leetcode.cn.one.four.six.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="shuwei.leetcode.cn.four" />
-      <option name="MAIN_CLASS_NAME" value="shuwei.leetcode.cn.four.SolutionTest2" />
+      <option name="PACKAGE_NAME" value="shuwei.shuwei.leetcode.cn.one.four.six" />
+      <option name="MAIN_CLASS_NAME" value="shuwei.shuwei.leetcode.cn.one.four.six.LRUCacheTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -346,16 +434,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolutionTest2.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LRUCacheTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="shuwei.leetcode.cn.four.*" />
+          <option name="PATTERN" value="shuwei.shuwei.leetcode.cn.one.four.six.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="shuwei.leetcode.cn.four" />
-      <option name="MAIN_CLASS_NAME" value="shuwei.leetcode.cn.four.SolutionTest2" />
+      <option name="PACKAGE_NAME" value="shuwei.shuwei.leetcode.cn.one.four.six" />
+      <option name="MAIN_CLASS_NAME" value="shuwei.shuwei.leetcode.cn.one.four.six.LRUCacheTest" />
       <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -363,16 +451,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolutionTest.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolutionTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="shuwei.leetcode.cn.seven.six.*" />
+          <option name="PATTERN" value="shuwei.leetcode.cn.two.eight.seven.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="shuwei.leetcode.cn.seven.six" />
-      <option name="MAIN_CLASS_NAME" value="shuwei.leetcode.cn.seven.six.SolutionTest" />
+      <option name="PACKAGE_NAME" value="shuwei.leetcode.cn.two.eight.seven" />
+      <option name="MAIN_CLASS_NAME" value="shuwei.leetcode.cn.two.eight.seven.SolutionTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -384,30 +472,13 @@
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="shuwei.leetcode.cn.four.*" />
+          <option name="PATTERN" value="shuwei.leetcode.cn.nine.seven.four.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="shuwei.leetcode.cn.four" />
-      <option name="MAIN_CLASS_NAME" value="shuwei.leetcode.cn.four.SolutionTest" />
+      <option name="PACKAGE_NAME" value="shuwei.leetcode.cn.nine.seven.four" />
+      <option name="MAIN_CLASS_NAME" value="shuwei.leetcode.cn.nine.seven.four.SolutionTest" />
       <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SolutionTest.test2 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="shuwei.leetcode.cn.four.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="shuwei.leetcode.cn.four" />
-      <option name="MAIN_CLASS_NAME" value="shuwei.leetcode.cn.four.SolutionTest" />
-      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -431,20 +502,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.LRUCache" />
       <item itemvalue="JUnit.Bag1Test.test" />
-      <item itemvalue="JUnit.SolutionTest.test (2)" />
+      <item itemvalue="JUnit.LRUCacheTest.test" />
+      <item itemvalue="JUnit.LRUCacheTest.test2" />
       <item itemvalue="JUnit.SolutionTest.test" />
-      <item itemvalue="JUnit.SolutionTest.test2 (1)" />
-      <item itemvalue="JUnit.SolutionTest2.test" />
-      <item itemvalue="JUnit.SolutionTest2.test2" />
+      <item itemvalue="JUnit.SolutionTest.test (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SolutionTest2.test2" />
-        <item itemvalue="JUnit.SolutionTest2.test" />
+        <item itemvalue="JUnit.SolutionTest.test (1)" />
         <item itemvalue="JUnit.SolutionTest.test" />
-        <item itemvalue="JUnit.SolutionTest.test2 (1)" />
-        <item itemvalue="JUnit.SolutionTest.test (2)" />
+        <item itemvalue="JUnit.LRUCacheTest.test2" />
+        <item itemvalue="JUnit.LRUCacheTest.test" />
+        <item itemvalue="Application.LRUCache" />
       </list>
     </recent_temporary>
   </component>
@@ -466,44 +537,45 @@
       <workItem from="1590114479537" duration="2160000" />
       <workItem from="1590153564686" duration="12789000" />
       <workItem from="1590243272057" duration="2680000" />
-      <workItem from="1590299633646" duration="22448000" />
+      <workItem from="1590299633646" duration="31198000" />
+      <workItem from="1590588021205" duration="5474000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SolutionTest2_test - 2020.05.25 at 11h 50m 25s.xml">
-      <configuration name="SolutionTest2.test" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 27m 21s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test - 2020.05.25 at 11h 50m 38s.xml">
-      <configuration name="SolutionTest2.test" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 28m 50s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test2 - 2020.05.25 at 11h 51m 03s.xml">
-      <configuration name="SolutionTest2.test2" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 29m 18s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test2 - 2020.05.25 at 11h 52m 56s.xml">
-      <configuration name="SolutionTest2.test2" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 29m 39s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test2 - 2020.05.25 at 11h 53m 15s.xml">
-      <configuration name="SolutionTest2.test2" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 36m 57s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test - 2020.05.25 at 11h 53m 22s.xml">
-      <configuration name="SolutionTest2.test" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 37m 02s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test - 2020.05.25 at 11h 54m 00s.xml">
-      <configuration name="SolutionTest2.test" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 39m 00s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test - 2020.05.25 at 11h 54m 19s.xml">
-      <configuration name="SolutionTest2.test" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 39m 31s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test2 - 2020.05.25 at 11h 55m 43s.xml">
-      <configuration name="SolutionTest2.test2" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 40m 58s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SolutionTest2_test2 - 2020.05.25 at 11h 55m 47s.xml">
-      <configuration name="SolutionTest2.test2" configurationId="JUnit" />
+    <history-entry file="SolutionTest_test_(1) - 2020.05.27 at 23h 57m 18s.xml">
+      <configuration name="SolutionTest.test (1)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84750000" />
+    <option name="totallyTimeSpent" value="98974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -518,7 +590,7 @@
     <frame x="20" y="43" width="1400" height="772" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.31519273" visible="true" weight="0.30044183" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.31519273" visible="true" weight="0.3048601" />
       <window_info id="Image Layers" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -528,7 +600,7 @@
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32928678" />
@@ -536,7 +608,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" x="480" y="352" width="723" height="357" id="Debug" order="12" visible="true" weight="0.39878234" />
+      <window_info anchor="bottom" x="480" y="352" width="723" height="357" id="Debug" order="12" weight="0.39878234" />
       <window_info anchor="right" id="Maven" order="0" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
@@ -581,32 +653,22 @@
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCache.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/two/eight/seven/Solution.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/improve/shuwei/acc/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/shuwei/improve/leetcode/regular/expression/matching/NFATest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/shuwei/improve/leetcode2sum/SolutionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SolutionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -897,13 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/four/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -930,15 +985,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/four/SolutionTest2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="19" />
+        <state relative-caret-position="230">
+          <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/four/Solution2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="37" column="71" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
+        <state relative-caret-position="180">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/AbstractMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="233" column="13" selection-start-line="233" selection-start-column="13" selection-end-line="233" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/LinkedHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="507" column="22" selection-start-line="507" selection-start-column="22" selection-end-line="507" selection-end-column="22" />
+          <folding>
+            <element signature="e#19667#19668#0" expanded="true" />
+            <element signature="e#19695#19696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCache2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="467" column="34" selection-start-line="467" selection-start-column="34" selection-end-line="467" selection-end-column="34" />
+          <folding>
+            <element signature="e#19103#19104#0" expanded="true" />
+            <element signature="e#19161#19162#0" expanded="true" />
+            <element signature="e#21107#21108#0" expanded="true" />
+            <element signature="e#21134#21135#0" expanded="true" />
+            <element signature="e#24329#24330#0" expanded="true" />
+            <element signature="e#24394#24395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCacheTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/nine/seven/four/SolutionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/nine/seven/four/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/shuwei/leetcode/cn/one/four/six/LRUCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="106" column="1" selection-start-line="5" selection-end-line="106" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="101" column="36" lean-forward="true" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/two/eight/seven/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/two/eight/seven/SolutionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
