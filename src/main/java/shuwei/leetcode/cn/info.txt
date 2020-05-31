@@ -100,3 +100,9 @@
   shuwei.leetcode.cn.nine.seven.four
 287. 寻找重复数
   shuwei.leetcode.cn.two.eight.seven
+198. 打家劫舍 ---- 比较简单的dp
+  shuwei.leetcode.cn.one.nine.eight
+84. 柱状图中最大的矩形 ---- 二维遍历的时候，可以横向，也可以竖向，寻找相邻问题，可能可以使用stack优化
+  shuwei.leetcode.cn.eight.four
+101. 对称二叉树
+  shuwei.leetcode.cn.one.zero.one
