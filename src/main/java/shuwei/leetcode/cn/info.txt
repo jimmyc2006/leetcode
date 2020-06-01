@@ -100,3 +100,5 @@
   shuwei.leetcode.cn.nine.seven.four
 287. 寻找重复数
   shuwei.leetcode.cn.two.eight.seven
+394. 字符串解码
+  shuwei.leetcode.cn.three.nine.four
