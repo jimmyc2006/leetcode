@@ -102,3 +102,5 @@
   shuwei.leetcode.cn.two.eight.seven
 394. 字符串解码
   shuwei.leetcode.cn.three.nine.four
+1431. 拥有最多糖果的孩子
+  shuwei.leetcode.cn.one.four.one.three
