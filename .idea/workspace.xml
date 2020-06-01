@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b50bf11-15d1-46c1-80ef-efab0084c075" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/eight/four/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/one/nine/eight/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/one/zero/one/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/one/zero/one/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/eight/four/SolutionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/one/nine/eight/SolutionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/shuwei/leetcode/cn/one/zero/one/SolutionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shuwei/leetcode/cn/info.txt" afterDir="false" />
-    </list>
+    <list default="true" id="4b50bf11-15d1-46c1-80ef-efab0084c075" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -376,7 +367,7 @@
       <workItem from="1590588021205" duration="5581000" />
       <workItem from="1590762379812" duration="1446000" />
       <workItem from="1590881879697" duration="9297000" />
-      <workItem from="1590903625968" duration="1878000" />
+      <workItem from="1590903625968" duration="1924000" />
     </task>
     <servers />
   </component>
@@ -413,7 +404,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111702000" />
+    <option name="totallyTimeSpent" value="111748000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,7 +417,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="23" width="1400" height="772" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.31519273" visible="true" weight="0.31811488" />
       <window_info id="Image Layers" order="1" />
