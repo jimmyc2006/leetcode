@@ -110,3 +110,5 @@
   shuwei.leetcode.cn.eight.four
 101. 对称二叉树
   shuwei.leetcode.cn.one.zero.one
+8. 字符串转换整数 (atoi)
+  shuwei.leetcode.cn.eight
