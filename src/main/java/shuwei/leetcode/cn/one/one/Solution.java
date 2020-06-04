@@ -5,9 +5,25 @@ package shuwei.leetcode.cn.one.one;
  * @version 创建时间：2020年4月18日 下午7:26:11 类说明
  */
 public class Solution {
+
+  // ------ 6.1 双指针,从两边往中间运动，谁小谁动，因为如果移动大的，不可能出现更大的容积
+  public int maxArea(int[] height) {
+    int ans = 0;
+    for (int i =0, j = height.length - 1; i < j;) {
+      if (height[i] > height[j]) {
+        ans = Math.max(ans, height[j] * (j - i));
+        j--;
+      } else {
+        ans = Math.max(ans, height[i] * (j - i));
+        i++;
+      }
+    }
+    return ans;
+  }
+  // ------ 上面是6.1复习
   
   // 看了双指针之后的思路
-  public int maxArea(int[] height) {
+  public int maxArea2(int[] height) {
     int maxArea = 0;
     for (int i = 0, j = height.length - 1; i < j;) {
       int area = Math.min(height[i], height[j]) * (j - i);

@@ -12,6 +12,7 @@ public class SolutionTest {
         genList(new int[] {2, 6})
     });
     browse(result);
+    s.mergeKLists(new ListNode[]{});
   }
   
   private ListNode genList(int[] data) {
