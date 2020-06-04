@@ -110,3 +110,5 @@
   shuwei.leetcode.cn.eight.four
 101. 对称二叉树
   shuwei.leetcode.cn.one.zero.one
+面试题64. 求1+2+…+n
+  shuwei.leetcode.cn.mst.six.four
