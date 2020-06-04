@@ -110,15 +110,11 @@
   shuwei.leetcode.cn.eight.four
 101. 对称二叉树
   shuwei.leetcode.cn.one.zero.one
-<<<<<<< HEAD
 面试题64. 求1+2+…+n
   shuwei.leetcode.cn.mst.six.four
-=======
 8. 字符串转换整数 (atoi)
   shuwei.leetcode.cn.eight
-<<<<<<< HEAD
 837. 新21点
   shuwei.leetcode.cn.eight.three.seven
-=======
->>>>>>> dd98d6a7a8afb302a9e1f12d2f39943f2d25d098
->>>>>>> 35ae4a16258952f379b685034f48ed00fde9ae0b
+238. 除自身以外数组的乘积
+  shuwei.leetcode.cn.two.three.eight
