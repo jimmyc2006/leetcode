@@ -1,6 +1,7 @@
 package shuwei.leetcode.cn.eight;
 
 public class Solution {
+  // 2ms 99%
   public int myAtoi(String str) {
     char[] chars = str.trim().toCharArray();
     if (chars.length < 1) {

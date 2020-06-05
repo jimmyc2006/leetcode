@@ -116,3 +116,7 @@
   shuwei.leetcode.cn.eight
 面试题29. 顺时针打印矩阵
   shuwei.leetcode.cn.mst.two.nine
+837. 新21点
+  shuwei.leetcode.cn.eight.three.seven
+238. 除自身以外数组的乘积
+  shuwei.leetcode.cn.two.three.eight
