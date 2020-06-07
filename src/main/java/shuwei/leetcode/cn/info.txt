@@ -116,7 +116,11 @@
   shuwei.leetcode.cn.eight
 面试题29. 顺时针打印矩阵
   shuwei.leetcode.cn.mst.two.nine
-837. 新21点
+837. 新21点 ---- dp
   shuwei.leetcode.cn.eight.three.seven
-238. 除自身以外数组的乘积
+238. 除自身以外数组的乘积 ---- 左右分开扫
   shuwei.leetcode.cn.two.three.eight
+128. 最长连续序列 ---- 思路，有人用dp
+  shuwei.leetcode.cn.one.two.eight
+126. 单词接龙 II
+  shuwei.leetcode.cn.one.two.six
