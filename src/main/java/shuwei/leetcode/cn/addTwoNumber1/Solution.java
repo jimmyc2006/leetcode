@@ -9,7 +9,7 @@ import shuwei.leetcode.cn.addTwoNumber1.ListNode;
 */
 public class Solution {
   public static void main(String[] args) {
-    ListNode l1 = generate(2, 4, 3);
+    ListNode l1 = generate( 2, 4, 3);
     ListNode l2 = generate(5, 6, 4);
     Solution s = new Solution();
     System.out.println(traversal(l1));
@@ -37,8 +37,35 @@ public class Solution {
     }
     return root;
   }
-  
+
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    ListNode ans = null, cur = null;
+    int remain = 0;
+    while(l1 != null || l2 != null){
+      if (l1 != null) {
+        remain += l1.val;
+        l1 = l1.next;
+      }
+      if (l2 != null) {
+        remain += l2.val;
+        l2 = l2.next;
+      }
+      if (ans == null) {
+        ans =  new  ListNode(remain % 10);
+        cur= ans;
+      } else {
+        cur.next = new ListNode(remain % 10);
+        cur = cur.next;
+      }
+      remain = remain / 10;
+    }
+    if (remain > 0) {
+      cur.next = new ListNode(remain);
+    }
+    return ans;
+  }
+
+  public ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
     ListNode curr = null;
     ListNode pre = null;
     ListNode head = null;
