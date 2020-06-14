@@ -1,5 +1,6 @@
 package shuwei.leetcode.cn.nine;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /** 
@@ -11,8 +12,8 @@ public class SolutionTest {
   @Test
   public void test1() {
     Solution s = new Solution();
-    System.out.println(s.isPalindrome(121));
-    System.out.println(s.isPalindrome(-121));
-    System.out.println(s.isPalindrome(10));
+    Assert.assertEquals(true, s.isPalindrome(121));
+    Assert.assertEquals(false, s.isPalindrome(-121));
+    Assert.assertEquals(false, s.isPalindrome(10));
   }
 }

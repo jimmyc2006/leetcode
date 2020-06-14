@@ -5,8 +5,22 @@ package shuwei.leetcode.cn.nine;
 * 类说明 
 */
 public class Solution {
-  
   public boolean isPalindrome(int x) {
+    if (x < 0) {
+      return false;
+    } else if(x == 0) {
+      return true;
+    }
+    int reverse = 0;
+    int tmp = x;
+    while (tmp > 0) {
+      reverse = 10 * reverse + (tmp % 10);
+      tmp = tmp / 10;
+    }
+    return reverse == x;
+  }
+
+  public boolean isPalindrome1(int x) {
     if (x < 0) {
       return false;
     } else if (x == 0) {

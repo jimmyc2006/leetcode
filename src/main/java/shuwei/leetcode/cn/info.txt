@@ -136,3 +136,7 @@
   shuwei.leetcode.cn.six.nine.seven
 1300. 转变数组后最接近目标值的数组和 ---- 思路+二分查找
   shuwei.leetcode.cn.one.three.zero.zero
+面试题46. 把数字翻译成字符串
+  shuwei.leetcode.cn.mst.four.six
+739. 每日温度
+  shuwei.leetcode.cn.seven.three.nine
