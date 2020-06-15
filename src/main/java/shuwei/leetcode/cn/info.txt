@@ -124,6 +124,18 @@
   shuwei.leetcode.cn.one.two.eight
 126. 单词接龙 II
   shuwei.leetcode.cn.one.two.six
+990. 等式方程的可满足性 ---- 连通性
+  shuwei.leetcode.cn.nine.nine.zero
+1276. 不浪费原料的汉堡制作方案
+  shuwei.leetcode.cn.one.two.seven.six
+15. 三数之和 ---- 思路现排序，再去重
+  shuwei.leetcode.cn.one.five
+70. 爬楼梯 ---- dp公式
+  shuwei.leetcode.cn.seven.zero
+697. 数组的度
+  shuwei.leetcode.cn.six.nine.seven
+1300. 转变数组后最接近目标值的数组和 ---- 思路+二分查找
+  shuwei.leetcode.cn.one.three.zero.zero
 面试题46. 把数字翻译成字符串
   shuwei.leetcode.cn.mst.four.six
 739. 每日温度
