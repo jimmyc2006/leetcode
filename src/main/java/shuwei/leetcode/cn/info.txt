@@ -142,3 +142,9 @@
   shuwei.leetcode.cn.seven.three.nine
 15. 三数之和
   shuwei.leetcode.cn.one.five
+14. 最长公共前缀
+  shuwei.leetcode.cn.one.four
+297. 二叉树的序列化与反序列化
+  shuwei.leetcode.cn.two.nine.seven
+1014. 最佳观光组合
+  shuwei.leetcode.cn.one.zero.one.four

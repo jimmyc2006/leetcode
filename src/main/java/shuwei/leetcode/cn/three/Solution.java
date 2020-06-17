@@ -1,5 +1,7 @@
 package shuwei.leetcode.cn.three;
 
+import shuwei.leetcode.cn.TreeNode;
+
 import java.util.HashMap;
 import java.util.Map;
 
