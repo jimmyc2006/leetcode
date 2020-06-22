@@ -5,35 +5,89 @@ import com.sun.javafx.collections.IntegerArraySyncer;
 import java.util.Map;
 
 public class Solution {
+
     public boolean patternMatching(String pattern, String value) {
         char[] patChars = pattern.toCharArray();
-        char[] valChars = value.toCharArray();
         int[] patCount = count(patChars);
-        return false;
+        return isMatch(value, patChars, patCount);
     }
 
     private boolean isMatch(String value, char[] pattern, int[] patCount) {
-        if (patCount[0] == 0 && patCount[1] == 0){
-            return value.length() < 1;
+        if (value.length() < 1 && patCount[0] > 0 && patCount[1] > 0) {
+            return false;
         }
         if (patCount[0] == 1 || patCount[1] == 1) {
             return true;
         }
-
-        if (patCount[0] == 0) {
-
-        } else {
-
+        if (patCount[0] == 0 && patCount[1] == 0){
+            return value.length() < 1;
         }
-        // 计算a和b的长度：acount * aLength + bCount * bLength = value.length
-        // 从0开始枚举a的长度
-        for (int i = 0; i <= value.length / ) {
 
+        if (patCount[0] == 0 || patCount[1] == 0) {
+            return this.isMatchOne(value, pattern.length);
         }
+        return isMatchTwo(value, pattern, patCount);
     }
 
-    private boolean isM(String value, int length, ) {
+    private boolean isMatchTwo(String value, char[] pattern, int[] patCount) {
+        // a.length * patCount[0] + b.length * patCount[1] = value.length
+        for (int i = 0; i <= value.length() / patCount[0]; i++) {
+            int aLength = i;
+            int totalLengthA = aLength * patCount[0];
+            if ((value.length() - totalLengthA) % patCount[1] != 0) {
+                continue;
+            }
+            int bLength = (value.length() - totalLengthA) / patCount[1];
+            if (isMatchTwo(value, pattern, aLength, bLength)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    private boolean isMatchTwo(String value, char[] pattern, int aLength, int bLength) {
+        int start = 0;
+        String aStr = null, bStr = null;
+        for (int i = 0; i < pattern.length; i++) {
+            if (pattern[i] == 'a') {
+                if (aStr == null) {
+                    aStr = value.substring(start, start + aLength);
+                } else {
+                    if (!aStr.equals(value.substring(start, start + aLength))) {
+                        return false;
+                    }
+                }
+                start += aLength;
+            } else {
+                if (bStr == null) {
+                    bStr = value.substring(start, start + bLength);
+                } else {
+                   if (!bStr.equals(value.substring(start, start + bLength))) {
+                        return false;
+                   }
+                }
+                start += bLength;
+            }
+            if (aStr != null && bStr != null && aStr.equals(bStr)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean isMatchOne(String value, int length) {
+        if (value.length() % length != 0 || value.length() < length) {
+            return false;
+        }
+        String pat = value.substring(0, length);
+        int start = length;
+        while (start < value.length()) {
+            if (!pat.equals(value.substring(start, start + length))) {
+                return false;
+            }
+            start = start + length;
+        }
+        return true;
     }
 
     private int[] count(char[] content) {
