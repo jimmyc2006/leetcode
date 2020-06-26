@@ -1,6 +1,8 @@
 package shuwei.improve.leetcode.addTwoNumbers;
 import org.junit.Test;
 
+import shuwei.leetcode.cn.ListNode;
+
 
 /**
  * @author shuwei

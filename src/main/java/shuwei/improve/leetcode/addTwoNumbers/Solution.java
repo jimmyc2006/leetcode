@@ -1,5 +1,7 @@
 package shuwei.improve.leetcode.addTwoNumbers;
 
+import shuwei.leetcode.cn.ListNode;
+
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int over = 0;

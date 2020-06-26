@@ -1,5 +1,7 @@
 package shuwei.leetcode.cn.two.zero.six;
 
+import shuwei.leetcode.cn.ListNode;
+
 public class Solution {
   // 这个是速度非常快的
   public ListNode reverseList(ListNode head) {

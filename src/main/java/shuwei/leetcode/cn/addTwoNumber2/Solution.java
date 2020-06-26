@@ -3,6 +3,8 @@ package shuwei.leetcode.cn.addTwoNumber2;
 import java.util.HashMap;
 import java.util.Map;
 
+import shuwei.leetcode.cn.ListNode;
+
 /**
  * @version 创建时间：2020年4月14日 下午2:53:49
  * 类说明

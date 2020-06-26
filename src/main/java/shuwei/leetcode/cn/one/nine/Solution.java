@@ -2,6 +2,8 @@ package shuwei.leetcode.cn.one.nine;
 
 import java.util.ArrayList;
 
+import shuwei.leetcode.cn.ListNode;
+
 public class Solution {
   // 1ms 38%
   public ListNode removeNthFromEnd(ListNode head, int n) {

@@ -1,5 +1,7 @@
 package shuwei.leetcode.cn.two.five;
 
+import shuwei.leetcode.cn.ListNode;
+
 public class Solution {
   
   public ListNode reverseKGroup(ListNode head, int k) {

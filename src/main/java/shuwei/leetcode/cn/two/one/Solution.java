@@ -1,5 +1,7 @@
 package shuwei.leetcode.cn.two.one;
 
+import shuwei.leetcode.cn.ListNode;
+
 public class Solution {
 
   // 官方的简洁版本

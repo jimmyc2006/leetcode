@@ -164,3 +164,9 @@
   shuwei.leetcode.cn.one.six
 139. 单词拆分 ---- dp,一维
   shuwei.leetcode.cn.one.three.nine
+面试题 02.01. 移除重复节点
+  shuwei.leetcode.cn.mst.two.one
+387. 字符串中的第一个唯一字符
+  shuwei.leetcode.cn.three.eight.seven
+剑指 Offer 53 - II. 0～n-1中缺失的数字
+  shuwei.leetcode.cn.jz.five.three

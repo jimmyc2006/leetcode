@@ -2,6 +2,8 @@ package shuwei.leetcode.cn.two.five;
 
 import org.junit.Test;
 
+import shuwei.leetcode.cn.ListNode;
+
 public class SolutionTest {
   @Test
   public void test() {
