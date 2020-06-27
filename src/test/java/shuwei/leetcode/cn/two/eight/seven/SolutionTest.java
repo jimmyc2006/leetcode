@@ -10,5 +10,7 @@ public class SolutionTest {
     Assert.assertEquals(2, s.findDuplicate(new int[]{1, 3, 4, 2, 2}));
     Assert.assertEquals(3, s.findDuplicate(new int[]{3, 1, 3, 4, 2}));
     Assert.assertEquals(2, s.findDuplicate(new int[]{1, 2, 2}));
+    Assert.assertEquals(1, s.findDuplicate(new int[]{1, 1}));
+    Assert.assertEquals(1, s.findDuplicate(new int[]{1, 1, 2}));
   }
 }

@@ -98,7 +98,7 @@
   shuwei.leetcode.cn.one.four.six
 974. 和可被 K 整除的子数组
   shuwei.leetcode.cn.nine.seven.four
-287. 寻找重复数
+287. 寻找重复数 ---- Floyd 判圈算法（快慢指针），二分查找
   shuwei.leetcode.cn.two.eight.seven
 394. 字符串解码
   shuwei.leetcode.cn.three.nine.four
@@ -166,7 +166,9 @@
   shuwei.leetcode.cn.one.three.nine
 面试题 02.01. 移除重复节点
   shuwei.leetcode.cn.mst.two.one
-387. 字符串中的第一个唯一字符
+387. 字符串中的第一个唯一字符 ----
   shuwei.leetcode.cn.three.eight.seven
-剑指 Offer 53 - II. 0～n-1中缺失的数字
+剑指 Offer 53 - II. 0～n-1中缺失的数字 ---- 普通思路，set.add可以直接判断是否包含
   shuwei.leetcode.cn.jz.five.three
+41. 缺失的第一个正数 ---- 数组可使用的思路，看的题解思路
+  shuwei.leetcode.cn.four.one
