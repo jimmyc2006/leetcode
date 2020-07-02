@@ -12,9 +12,12 @@ import java.util.TreeSet;
 import shuwei.leetcode.cn.ListNode;
 
 public class Solution {
+  public ListNode mergeKLists(ListNode[] lists) {
+    
+  }
 
   // -------- 6.1复习,6ms,57%
-  public ListNode mergeKLists(ListNode[] lists) {
+  public ListNode mergeKLists2(ListNode[] lists) {
     if (lists == null || lists.length < 1) {
       return null;
     }
