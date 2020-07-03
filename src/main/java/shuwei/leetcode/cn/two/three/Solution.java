@@ -1,19 +1,41 @@
 package shuwei.leetcode.cn.two.three;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 
 import shuwei.leetcode.cn.ListNode;
 
 public class Solution {
+  // 5ms 60+%
   public ListNode mergeKLists(ListNode[] lists) {
-    
+    if (lists == null || lists.length < 1) {
+      return null;
+    }
+    ListNode ans = null, curr = null;
+    PriorityQueue<ListNode> queue = new PriorityQueue(lists.length, new Comparator<ListNode>() {
+      @Override
+      public int compare(ListNode o1, ListNode o2) {
+        return o1.val - o2.val;
+      }
+    });
+    for (ListNode ln : lists) {
+      if (ln != null) {
+        queue.add(ln);
+      }
+    }
+    while (!queue.isEmpty()){
+      ListNode ln = queue.poll();
+      if (ans == null) {
+        ans = ln;
+        curr = ln;
+      } else {
+        curr.next = ln;
+        curr = ln;
+      }
+      if (ln.next != null) {
+        queue.add(ln.next);
+      }
+    }
+    return ans;
   }
 
   // -------- 6.1复习,6ms,57%
