@@ -4,7 +4,44 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class Solution {
+
+  // dp解法, 1ms, 100%
   public int longestValidParentheses(String s) {
+    if (s == null || s.length() <= 1) {
+      return 0;
+    }
+    int ans = 0;
+    int length = s.length();
+    char[] sChars = s.toCharArray();
+    int[] f = new int[length + 1];
+    for (int i = 1; i <= length; i++) {
+      if (sChars[i - 1] == '(') {
+        f[i] = 0;
+      } else {
+        if (f[i - 1] == 0) {
+          int index = i - 2;
+          if (index >= 0 && sChars[index] == '(') {
+            f[i] = 2 + f[i - 2];
+            ans = Math.max(ans, f[i]);
+          } else {
+            f[i] = 0;
+          }
+        } else {
+          int index = i - f[i - 1] - 2;
+          if (index >= 0 && sChars[index] == '(') {
+            f[i] = 2 + f[i - 1] + f[index];
+            ans = Math.max(ans, f[i]);
+          } else {
+            f[i] = 0;
+          }
+        }
+      }
+    }
+    return ans;
+  }
+
+  // 栈解法
+  public int longestValidParentheses1(String s) {
     if (s == null || s.length() <= 1) {
       return 0;
     }

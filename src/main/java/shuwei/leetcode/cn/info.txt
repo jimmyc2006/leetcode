@@ -182,5 +182,7 @@
   shuwei.leetcode.cn.three.seven.eight
 108. 将有序数组转换为二叉搜索树
   shuwei.leetcode.cn.one.zero.eight
-32. 最长有效括号
+32. 最长有效括号 ---- 使用的stack，dp还没有想出来
   shuwei.leetcode.cn.three.two
+44. 通配符匹配 ---- dp解法,79%，使用P作为i，还可以使用S作为i
+  shuwei.leetcode.cn.four.four
