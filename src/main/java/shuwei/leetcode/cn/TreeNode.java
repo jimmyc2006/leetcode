@@ -36,7 +36,7 @@ public class TreeNode {
             int size = queue.size();
             for (int j = 0; j < size; j++) {
                 TreeNode tn = queue.poll();
-                if (nullStr.equals(strs[i])) {
+                if (nullStr.equals(strs[i].trim())) {
                     tn.left = null;
                     i++;
                 } else {
