@@ -9,18 +9,20 @@ import java.util.stream.Collectors;
 
 public class Solution {
 
-  // 看了官方的归并+索引数组算法, 没有看代码
+  // 看了官方的归并+索引数组算法
   public List<Integer> countSmaller(int[] nums) {
-    if(nums.length < 1) {
+    int len = nums.length;
+    if(len < 1) {
       return new ArrayList<>();
     }
-    indexs = new int[nums.length];
-    for (int i = 0; i < nums.length; i++) {
+    indexs = new int[len];
+    tmpIndexs = new int[len];
+    for (int i = 0; i < len; i++) {
       indexs[i] = i;
     }
-    ans = new int[nums.length];
+    ans = new int[len];
     this.nums = nums;
-    mergeSort(0, nums.length - 1);
+    mergeSort(0, len - 1);
     List<Integer> result = new ArrayList<>(nums.length);
     for (int ele : ans) {
       result.add(ele);
@@ -30,29 +32,44 @@ public class Solution {
 
   private int[] nums;
   private int[] indexs;
+  private int[] tmpIndexs;
   private int[] ans;
 
-  private int[] mergeSort(int start, int end) {
+  private void mergeSort(int start, int end) {
     if (start == end) {
-      return new int[]{indexs[start]};
+      return;
     }
     int mid = (start + end) / 2;
-    int[] left  = mergeSort(start, mid);
-    int[] right = mergeSort(mid + 1, end);
-    int[] tmpArr = new int[left.length + right.length];
-    int index = 0, i = 0, j = 0;
-    while(i < left.length || j < right.length) {
-      while(i < left.length && (j == right.length || nums[left[i]] <= nums[right[j]])) {
-        ans[left[i]] += j;
-        tmpArr[index++] = left[i];
-        i++;
+    mergeSort(start, mid);
+    mergeSort(mid + 1, end);
+    if (nums[indexs[mid]] > nums[indexs[mid + 1]]) {
+      // 放入中间临时数组
+      for (int i = start; i <= end; i++) {
+        tmpIndexs[i] = indexs[i];
       }
-      while(j < right.length && (i == left.length || nums[right[j]] < nums[left[i]])) {
-        tmpArr[index++] = right[j];
-        j++;
+      int i = start, j = mid + 1;
+      while (start <= end) {
+        if (i > mid) {
+          indexs[start++] = tmpIndexs[j];
+          j++;
+        } else if(j > end) {
+          indexs[start] = tmpIndexs[i++];
+          ans[indexs[start++]] += end - mid;
+        } else if(nums[tmpIndexs[i]] <= nums[tmpIndexs[j]]) {
+          indexs[start] = tmpIndexs[i++];
+          ans[indexs[start++]] += j - mid - 1;
+        } else {
+          indexs[start++] = tmpIndexs[j++];
+        }
+//        while (start <= mid && (rightStart > end || nums[tmpIndexs[start]] <= nums[tmpIndexs[rightStart]])) {
+//          ans[tmpIndexs[start]] += rightStart - mid - 1;
+//          indexs[indexPlus++] = tmpIndexs[start++];
+//        }
+//        while (rightStart <= end && (start > mid || nums[tmpIndexs[rightStart]] < nums[tmpIndexs[start]])) {
+//          indexs[indexPlus++] = tmpIndexs[rightStart++];
+//        }
       }
     }
-    return tmpArr;
   }
 
   // 能ac，
