@@ -9,18 +9,21 @@ public class Solution {
   // 从后往前做dp的时候只要 保证每一步都活着，不用保存累计值
   // 理论上某一步就是它后面两种走法需要的最低生命值，在结合当前步骤数值，就能计算出当前步骤需要的最低生命值
   public int calculateMinimumHP(int[][] dungeon) {
-    int n = dungeon.length, m = dungeon[0].length;
-    int[][] dp = new int[n + 1][m + 1];
-    for (int i = 0; i <= n; ++i) {
-      Arrays.fill(dp[i], Integer.MAX_VALUE);
+    int xLength = dungeon.length;
+    int yLength = dungeon[0].length;
+    int[][] f = new int[xLength + 1][yLength + 1];
+    for (int i = 0; i <= xLength; i++) {
+      Arrays.fill(f[i], Integer.MAX_VALUE);
     }
-    dp[n][m - 1] = dp[n - 1][m] = 1;
-    for (int i = n - 1; i >= 0; --i) {
-      for (int j = m - 1; j >= 0; --j) {
-        int minn = Math.min(dp[i + 1][j], dp[i][j + 1]);
-        dp[i][j] = Math.max(minn - dungeon[i][j], 1);
+    // 最后一个点的下面和右边设置为1
+    f[xLength - 1][yLength] = 1;
+    f[xLength][yLength - 1] = 1;
+    for(int i = xLength - 1; i >= 0; i--) {
+      for (int j = yLength - 1; j >= 0; j--) {
+        int min = Math.min(f[i + 1][j], f[i][j + 1]);
+        f[i][j] = Math.max(min - dungeon[i][j], 1);
       }
     }
-    return dp[0][0];
+    return f[0][0];
   }
 }

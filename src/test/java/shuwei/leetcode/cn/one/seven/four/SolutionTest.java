@@ -9,5 +9,6 @@ public class SolutionTest {
     Solution s = new Solution();
     Assert.assertEquals(7, s.calculateMinimumHP(new int[][]{{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}}));
     Assert.assertEquals(1, s.calculateMinimumHP(new int[][]{{100}}));
+    Assert.assertEquals(4, s.calculateMinimumHP(new int[][]{{0, -3}}));
   }
 }
