@@ -61,13 +61,6 @@ public class Solution {
         } else {
           indexs[start++] = tmpIndexs[j++];
         }
-//        while (start <= mid && (rightStart > end || nums[tmpIndexs[start]] <= nums[tmpIndexs[rightStart]])) {
-//          ans[tmpIndexs[start]] += rightStart - mid - 1;
-//          indexs[indexPlus++] = tmpIndexs[start++];
-//        }
-//        while (rightStart <= end && (start > mid || nums[tmpIndexs[rightStart]] < nums[tmpIndexs[start]])) {
-//          indexs[indexPlus++] = tmpIndexs[rightStart++];
-//        }
       }
     }
   }
