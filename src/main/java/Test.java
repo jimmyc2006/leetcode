@@ -4,6 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Test {
+    public static void main(String[] args) throws InterruptedException {
+        for (int i = 0; i< 6; i++){
+            System.out.println(i + 1);
+            Thread.sleep( 10000);
+        }
+    }
     public String convert(String s, int numRows) {
         if (numRows < 2 || s.length() == 0) {
             return s;
