@@ -4,44 +4,32 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * @author shuwei
- * @version 创建时间：2020年4月16日 下午4:40:26 类说明
- */
 public class Solution {
-  public static void main(String[] args) {
-//    int[][] data = new int[][] {{2, 3}, {1, 6}, {8, 10}, {15, 18}};
-    int[][] data = new int[][] {};
-    Solution s = new Solution();
-    int[][] result = s.merge(data);
-    for (int[] ele : result) {
-      System.out.println(Arrays.toString(ele));
-    }
-  }
 
   public int[][] merge(int[][] intervals) {
-    List<int[]> result = new ArrayList<>();
-    if (intervals.length < 1) {
-      return new int[][] {};
+    if (intervals.length <= 1) {
+      return intervals;
     }
-    // 先根据左边的端点进行排序
-    Arrays.sort(intervals, (x,y)->x[0]-y[0]);
-    int min = intervals[0][0];
-    int max = intervals[0][1];
-    // 遍历数组，合并
+    // 根据数组第一个进行排序
+    Arrays.sort(intervals, (o1, o2) -> o1[0] - o2[0]);
+    List<int[]> ans = new ArrayList<>();
+    int[] cur = intervals[0];
     for (int i = 1; i < intervals.length; i++) {
-      int curStart = intervals[i][0];
-      int curEnd = intervals[i][1];
-      if (curStart > max) {
-        //  没交集需要重新创建一个结果集
-        result.add(new int[] {min, max});
-        min = curStart;
-        max = curEnd;
+      if (cur[1] >= intervals[i][0]) {
+        cur[1] = Math.max(cur[1], intervals[i][1]);
       } else {
-        max = Math.max(max, curEnd);
+        ans.add(cur);
+        cur = intervals[i];
       }
     }
-    result.add(new int[] {min, max});
-    return result.toArray(new int[result.size()][2]);
+    if (ans.isEmpty() || ans.get(ans.size() - 1) != cur) {
+      ans.add(cur);
+    }
+    int[][] result = new int[ans.size()][];
+    for (int i = 0; i < ans.size(); i++) {
+      result[i] = ans.get(i);
+    }
+    return result;
   }
+
 }
