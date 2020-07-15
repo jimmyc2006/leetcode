@@ -204,3 +204,5 @@
   shuwei.leetcode.cn.three.five.zero
 120. 三角形最小路径和
   shuwei.leetcode.cn.one.two.zero
+96. 不同的二叉搜索树
+  shuwei.leetcode.cn.nine.six
