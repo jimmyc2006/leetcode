@@ -1,12 +1,29 @@
 package shuwei.leetcode.cn.one.two.four.eight;
 
 public class Solution {
+
   public int numberOfSubarrays(int[] nums, int k) {
+    int n = nums.length, ans = 0;
+    int[] pre = new int[n + 1];
+    pre[0] = 0;
+    int[] cnt = new int[n + 1];
+    cnt[0] = 1;
+    for (int i = 0; i < n; i++) {
+      pre[i + 1] = pre[i] + (nums[i] & 1);
+      if (pre[i + 1] >= k) {
+        ans += cnt[pre[i + 1] - k];
+      }
+      cnt[pre[i + 1]] += 1;
+    }
+    return ans;
+  }
+
+  public int numberOfSubarrays1(int[] nums, int k) {
     // 先把奇数取出来
     int[] jishu = new int[nums.length];
     int index = 0;
     for (int i = 0; i < nums.length; i++) {
-      if(nums[i] % 2 == 1) {
+      if (nums[i] % 2 == 1) {
         jishu[index++] = i;
       }
     }
@@ -19,8 +36,8 @@ public class Solution {
         int end = jishu[i];
         int step = jishu[startIndex] - start;
         ans += step;
-        while((jishu[i + 1] == 0 && end < nums.length) ||
-          ++end < jishu[i + 1]) {
+        while ((jishu[i + 1] == 0 && end < nums.length) ||
+                ++end < jishu[i + 1]) {
 
         }
       }
