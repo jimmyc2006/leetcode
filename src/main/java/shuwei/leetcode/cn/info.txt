@@ -208,3 +208,13 @@
   shuwei.leetcode.cn.nine.six
 785. 判断二分图
   shuwei.leetcode.cn.seven.eight.five
+35. 搜索插入位置
+  shuwei.leetcode.cn.three.five
+97. 交错字符串 二维数组dp比三维数组dp快很多
+  shuwei.leetcode.cn.nine.seven
+312. 戳气球
+  shuwei.leetcode.cn.three.one.two
+167. 两数之和 II - 输入有序数组
+  shuwei.leetcode.cn.one.six.seven
+95. 不同的二叉搜索树 II
+  shuwei.leetcode.cn.nine.five
