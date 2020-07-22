@@ -206,3 +206,5 @@
   shuwei.leetcode.cn.one.two.zero
 96. 不同的二叉搜索树
   shuwei.leetcode.cn.nine.six
+785. 判断二分图
+  shuwei.leetcode.cn.seven.eight.five
