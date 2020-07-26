@@ -9,6 +9,7 @@ public class SolutionTest {
   public void test() {
     Solution s = new Solution();
     Assert.assertEquals(18, s.splitArray(new int[]{7, 2, 5, 10, 8}, 2));
+    Assert.assertEquals(2147483647, s.splitArray(new int[]{1, 2147483646}, 1));
   }
 
 }

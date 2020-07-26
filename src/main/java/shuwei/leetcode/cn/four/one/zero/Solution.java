@@ -3,7 +3,39 @@ package shuwei.leetcode.cn.four.one.zero;
 import java.util.Arrays;
 
 public class Solution {
+  // 采用猜数的方法
+  // 因为最大值是sum(int[]),最小值是max(int[]),所以采用二分查找法进行猜测
   public int splitArray(int[] nums, int m) {
+    int sums = 0;
+    int maxValue = 0;
+    for (int num : nums) {
+      sums += num;
+      maxValue = Math.max(maxValue, num);
+    }
+    int start = maxValue;
+    int end = sums;
+    while (start < end) {
+      int mid = start + (end - start) / 2;
+      int groupCount = 1;
+      int currSum = 0;
+      for (int num : nums) {
+        if (currSum + num > mid) {
+          currSum = 0;
+          groupCount++;
+        }
+        currSum += num;
+      }
+      if (groupCount > m) {
+        start = mid + 1;
+      } else {
+        end = mid;
+      }
+    }
+    return start;
+  }
+
+  // dp法有点慢
+  public int splitArray1(int[] nums, int m) {
     int[][] dp = new int[nums.length + 1][m + 1];
     int[] totalSums = new int[nums.length];
     int sum = 0;
