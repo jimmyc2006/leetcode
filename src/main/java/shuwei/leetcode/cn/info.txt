@@ -228,3 +228,5 @@
   shuwei.leetcode.cn.three.two.nine
 1494. 并行课程 II
   shuwei.leetcode.cn.one.four.nine.four
+392. 判断子序列
+  shuwei.leetcode.cn.one.three.nine.two
