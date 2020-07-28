@@ -222,3 +222,5 @@
   shuwei.leetcode.cn.jzof.one.one
 64. 最小路径和 ----- dp需要优化
   shuwei.leetcode.cn.six.four
+1025. 除数博弈
+  shuwei.leetcode.cn.one.zero.two.five
