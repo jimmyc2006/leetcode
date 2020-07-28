@@ -1,37 +1,29 @@
 package shuwei.leetcode.cn.nine;
-/** 
-* @author shuwei 
-* @version 创建时间：2020年4月22日 下午7:37:30 
-* 类说明 
-*/
+
 public class Solution {
+  // 这里的(x % 10 == 0 && x != 0)有点玄学
   public boolean isPalindrome(int x) {
-    if (x < 0) {
+    if (x < 0 || (x % 10 == 0 && x != 0)) {
       return false;
-    } else if(x == 0) {
-      return true;
     }
     int reverse = 0;
-    int tmp = x;
-    while (tmp > 0) {
-      reverse = 10 * reverse + (tmp % 10);
-      tmp = tmp / 10;
+    while (x > reverse) {
+      reverse = reverse * 10 + x % 10;
+      x = x / 10;
     }
-    return reverse == x;
+    return x == reverse || x == reverse / 10;
   }
 
   public boolean isPalindrome1(int x) {
     if (x < 0) {
       return false;
-    } else if (x == 0) {
-      return true;
     }
-    int j = x;
-    int y = 0;
-    while (j > 0) {
-      y = y * 10 + j % 10;
-      j = j / 10;
+    int reverse = 0;
+    int tmp = x;
+    while (tmp > 0) {
+      reverse = reverse * 10 + tmp % 10;
+      tmp = tmp / 10;
     }
-    return y == x;
+    return reverse == x;
   }
 }

@@ -224,3 +224,11 @@
   shuwei.leetcode.cn.six.four
 1025. 除数博弈
   shuwei.leetcode.cn.one.zero.two.five
+410. 分割数组的最大值
+  shuwei.leetcode.cn.four.one.zero
+329. 矩阵中的最长递增路径
+  shuwei.leetcode.cn.three.two.nine
+1494. 并行课程 II
+  shuwei.leetcode.cn.one.four.nine.four
+392. 判断子序列
+  shuwei.leetcode.cn.one.three.nine.two
