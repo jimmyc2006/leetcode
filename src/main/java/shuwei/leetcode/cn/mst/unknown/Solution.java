@@ -112,17 +112,25 @@ public class Solution {
         }
         minVCache = new HashMap<>();
         System.out.println("::::" + (System.currentTimeMillis() - startTime));
+        times = 0;
         return dfs(0, 0, -1);
     }
 
+    private int times;
     Map<Point, Integer> in2StrapDistance;
     Map<Point, Integer> outTrapMap;
     Map<Point, Map<Point, Integer>> trap2StrapDistance;
     List<Point> trapsList;
     int[] index;
     Map<String, Integer> minVCache;
+    private int minValue = Integer.MAX_VALUE;   // 剪枝
 
     private int dfs(int beforeSum, int level, int beforeIndex) {
+        times++;
+        if (beforeSum >= minValue){
+//            System.out.println(beforeSum + " :: " + minValue + "::" + times++);
+            return Integer.MAX_VALUE;
+        }
         String key = this.genIndexKey(beforeIndex);
         if (minVCache.get(key) != null) {
             return minVCache.get(key) + beforeSum;
@@ -133,6 +141,7 @@ public class Solution {
                 index[i] = -1;
                 int dis = dfs(in2StrapDistance.get(trapsList.get(i)), level + 1, i);
                 minDis = Math.min(minDis, dis);
+                minValue = minDis;
                 index[i] = i;
             }
             return minDis;
@@ -153,7 +162,9 @@ public class Solution {
                     index[i] = i;
                 }
             }
-            minVCache.put(key, minDis - beforeSum);
+            if (minDis != Integer.MAX_VALUE) {
+                minVCache.put(key, minDis - beforeSum);
+            }
             return minDis;
         }
     }
