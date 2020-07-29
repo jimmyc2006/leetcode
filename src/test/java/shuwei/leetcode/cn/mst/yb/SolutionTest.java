@@ -20,10 +20,10 @@ public class SolutionTest {
   @Test
   public void test2() {
     Solution s = new Solution();
-    System.out.println(s.waysToChange3(5));
-    System.out.println(s.waysToChange3(10));
-    System.out.println(s.waysToChange3(15));
-    System.out.println(s.waysToChange3(21));
+    System.out.println(s.waysToChange(5));
+    System.out.println(s.waysToChange(10));
+    System.out.println(s.waysToChange(15));
+    System.out.println(s.waysToChange(21));
     System.out.println("------");
     System.out.println(s.waysToChange(4));
     System.out.println(s.waysToChange(5));
