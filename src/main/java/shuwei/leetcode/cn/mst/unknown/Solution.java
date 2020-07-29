@@ -14,7 +14,6 @@ public class Solution {
 
     // ["S#O", "M..", "M.T"]
     public int minimalSteps(String[] maze) {
-        long startTime = System.currentTimeMillis();
         cMaze = new char[maze.length][];
         for (int i = 0; i < maze.length; i++) {
             cMaze[i] = maze[i].toCharArray();
@@ -73,64 +72,71 @@ public class Solution {
         if (inStonesMap.isEmpty()) {
             return -1;
         }
-        outTrapMap = bfsStonesDistances(end, trapsList);
-        if (outTrapMap.isEmpty()) {
+        Map<Point, Integer> outMap = bfsStonesDistances(end, trapsList);
+        if (outMap.isEmpty()) {
             return -1;
+        }
+        Map<Point, Integer> indexMap = new HashMap<>();
+        for (int i = 0; i < trapsList.size(); i++) {
+            indexMap.put(trapsList.get(i), i);
+        }
+        outTrapArr = new int[trapsList.size()];
+        for (Map.Entry<Point, Integer> ent : outMap.entrySet()) {
+            outTrapArr[indexMap.get(ent.getKey())] = ent.getValue();
         }
         // in to trap to strap ... to strap to end
         // in to traps
-        in2StrapDistance = new HashMap<>();
-        for (Point trap : trapsList) {
+        in2trapDistance = new int[trapsList.size()];
+        for (int i = 0; i < trapsList.size(); i++) {
             int distance = Integer.MAX_VALUE;
             for (Point stone : goodStoneSet) {
-                distance = Math.min(distance, inStonesMap.get(stone) + trap2StoneMap.get(trap).get(stone));
+                distance = Math.min(distance, inStonesMap.get(stone) + trap2StoneMap.get(trapsList.get(i)).get(stone));
             }
-            in2StrapDistance.put(trap, distance);
+            in2trapDistance[i] =  distance;
         }
-        trap2StrapDistance = new HashMap<>();
-        for (Point startTrap : trapsList) {
-            Map<Point, Integer> map = new HashMap<>();
-            trap2StrapDistance.put(startTrap, map);
-            for (Point endTrap : trapsList) {
-                if (!endTrap.equals(startTrap)) {
+        trap2trapDistance = new int[trapsList.size()][trapsList.size()];
+        for (int i = 0; i < trapsList.size(); i++) {
+            for (int j = 0; j < trapsList.size(); j++) {
+                if (i != j && trap2trapDistance[i][j] == 0) {
                     int minDis = Integer.MAX_VALUE;
                     for (Point stone : goodStoneSet) {
-                        minDis = Math.min(minDis, trap2StoneMap.get(startTrap).get(stone) + trap2StoneMap.get(endTrap).get(stone));
+                        minDis = Math.min(minDis, trap2StoneMap.get(trapsList.get(i)).get(stone) + trap2StoneMap.get(trapsList.get(j)).get(stone));
                     }
-                    map.put(endTrap, minDis);
+                    trap2trapDistance[i][j] = minDis;
+                    trap2trapDistance[j][i] = minDis;
                 }
             }
         }
         // in totraps to end
-        int ans = Integer.MAX_VALUE;
         index = new int[trapsList.size()];
         for (int i = 0; i < index.length; i++) {
             index[i] = i;
         }
         if (index.length == 1) {
-            return in2StrapDistance.get(trapsList.get(0)) + outTrapMap.get(trapsList.get(0));
+            return in2trapDistance[0] + outTrapArr[0];
         }
         minVCache = new HashMap<>();
-        System.out.println("::::" + (System.currentTimeMillis() - startTime));
-        times = 0;
+        minValue = Integer.MAX_VALUE;
         return dfs(0, 0, -1);
     }
 
-    private int times;
-    Map<Point, Integer> in2StrapDistance;
-    Map<Point, Integer> outTrapMap;
-    Map<Point, Map<Point, Integer>> trap2StrapDistance;
+    int[] in2trapDistance;
+    int[] outTrapArr;
+    int[][] trap2trapDistance;
     List<Point> trapsList;
     int[] index;
     Map<String, Integer> minVCache;
-    private int minValue = Integer.MAX_VALUE;   // 剪枝
+    private int minValue;   // 剪枝
+
+    // "#....M....",
+    // "M..#...M..",
+    // "..OMO#SO.M",
+    // ".OOMOT.#OM
 
     private int dfs(int beforeSum, int level, int beforeIndex) {
-        times++;
-        if (beforeSum >= minValue){
-//            System.out.println(beforeSum + " :: " + minValue + "::" + times++);
-            return Integer.MAX_VALUE;
-        }
+//        if (beforeSum >= minValue){
+//            return Integer.MAX_VALUE;
+//        }
         String key = this.genIndexKey(beforeIndex);
         if (minVCache.get(key) != null) {
             return minVCache.get(key) + beforeSum;
@@ -139,32 +145,37 @@ public class Solution {
         if (level == 0) {
             for (int i = 0; i < index.length; i++) {
                 index[i] = -1;
-                int dis = dfs(in2StrapDistance.get(trapsList.get(i)), level + 1, i);
+                int dis = dfs(in2trapDistance[i], level + 1, i);
                 minDis = Math.min(minDis, dis);
-                minValue = minDis;
+                minValue = Math.min(minValue, minDis);
                 index[i] = i;
             }
             return minDis;
         } else if (level == index.length - 1) {
             for (int i = 0; i < index.length; i++) {
-                if (index[i] >= 0) {
-                    minDis = beforeSum + trap2StrapDistance.get(trapsList.get(i)).get(trapsList.get(beforeIndex)) + outTrapMap.get(trapsList.get(i));
-                    return minDis;
+                if (index[i] == i) {
+                    minDis = beforeSum + trap2trapDistance[i][beforeIndex] + outTrapArr[i];
+                    minValue = Math.min(minValue, minDis);
+                    break;
                 }
             }
             return minDis;
         } else {
+//            boolean isBreak = false;
             for (int i = 0; i < index.length; i++) {
                 if (index[i] == i) {
                     index[i] = -1;
-                    int thisDis = dfs(beforeSum + trap2StrapDistance.get(trapsList.get(i)).get(trapsList.get(beforeIndex)), level + 1, i);
+                    int thisDis = dfs(beforeSum + trap2trapDistance[i][beforeIndex], level + 1, i);
                     minDis = Math.min(minDis, thisDis);
                     index[i] = i;
+//                    if (thisDis == Integer.MAX_VALUE) {
+//                        isBreak = true;
+//                    }
                 }
             }
-            if (minDis != Integer.MAX_VALUE) {
+//            if (!isBreak) {
                 minVCache.put(key, minDis - beforeSum);
-            }
+//            }
             return minDis;
         }
     }
@@ -216,26 +227,6 @@ public class Solution {
             currDistance++;
         }
         return resultMap;
-    }
-
-    public <T> void listAll(T[] t) {
-        allArray.clear();
-        listAll0(Arrays.asList(t), new LinkedList<>());
-    }
-
-    List allArray = new ArrayList<>();
-
-    private <T> void listAll0(List<T> l, LinkedList<T> prefix) {
-        if (l.isEmpty()) {
-            allArray.add(new ArrayList(prefix));
-            return;
-        }
-        for (int i = 0; i < l.size(); i++) {
-            List<T> temp = new LinkedList<T>(l);
-            prefix.add(temp.remove(i));
-            listAll0(temp, prefix);
-            prefix.removeLast();
-        }
     }
 
     static class Point {
