@@ -5,6 +5,9 @@ import org.junit.Test;
 import shuwei.leetcode.cn.TreeNode;
 import shuwei.leetcode.cn.TreeNodeUtil;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class SolutionTest {
     @Test
     public void test() {
