@@ -38,4 +38,18 @@ public class TreeNodeUtil {
         }
         return sb.toString();
     }
+
+    public static void beforeB(TreeNode tn) {
+        beforeBInner(tn);
+    }
+
+    private static void beforeBInner(TreeNode tn) {
+        System.out.print(tn.val + " ");
+        if (tn.left != null) {
+            beforeBInner(tn.left);
+        }
+        if (tn.right != null) {
+            beforeBInner(tn.right);
+        }
+    }
 }

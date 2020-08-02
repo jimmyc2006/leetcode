@@ -1,263 +1,190 @@
 package shuwei.leetcode.cn.mst.unknown;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
-public class Solution {
+class Solution {
 
-    private final char in = 'S';
-    private final char out = 'T';
-    private final char ban = '#';
-    private final char stones = 'O';
-    private final char trap = 'M';
+  private int[][] dist;
+  private Queue<Point> queue;
+  private int[] dir = {-1, 0, 1, 0, -1};  // 压缩方向数组，二维变一维, {-1,0},{0,1},{1,0},{0,-1}
+  private int n;
+  private int m;
+  private int[][] tsDist; // trigger to stone dist
+  private int[][] ttDist;  // trigger to trigger dist
+  private int[][] f;
+  private int INF = 0x3f3f3f3f;
 
-    private char[][] cMaze;
+  public int minimalSteps(String[] maze) {
+    this.n = maze.length;
+    this.m = maze[0].length();
+    dist = new int[150][150];
+    tsDist = new int[20][45];
+    ttDist = new int[20][20];
+    f = new int[20][1 << 16];
+    queue = new LinkedList<>();
 
-    // ["S#O", "M..", "M.T"]
-    public int minimalSteps(String[] maze) {
-        cMaze = new char[maze.length][];
-        for (int i = 0; i < maze.length; i++) {
-            cMaze[i] = maze[i].toCharArray();
+    Point startPoint = null;
+    Point endPoint = null;
+    List<Point> stones = new ArrayList<>();
+    List<Point> triggers = new ArrayList<>();
+
+    // 为了方便, string maze -> matrix
+    char[][] mat = new char[n][m];
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < m; j++) {
+        mat[i][j] = maze[i].charAt(j);
+      }
+    }
+    // init maze
+    for (int i = 0; i < n; i++) {
+      for (int j = 0; j < m; j++) {
+        if (mat[i][j] == 'S') {
+          startPoint = new Point(i, j);
+          mat[i][j] = '.';
+          continue;
         }
-        // 收集石头堆和陷阱信息
-        Set<Point> stoneSet = new HashSet<>();
-        trapsList = new ArrayList<>();
-        Point start = null, end = null;
-        for (int i = 0; i < cMaze.length; i++) {
-            for (int j = 0; j < cMaze[i].length; j++) {
-                switch (cMaze[i][j]) {
-                    case in:
-                        start = new Point(i, j);
-                        break;
-                    case out:
-                        end = new Point(i, j);
-                        break;
-                    case stones:
-                        stoneSet.add(new Point(i, j));
-                        break;
-                    case trap:
-                        trapsList.add(new Point(i, j));
-                        break;
-                    default:
-                        break;
-                }
-            }
+        if (mat[i][j] == 'T') {
+          endPoint = new Point(i, j);
+          mat[i][j] = '.';
+          continue;
         }
-        // 没有陷阱，直接返回入口到出口距离
-        if (trapsList.isEmpty()) {
-            Map<Point, Integer> tmp = this.bfsStonesDistances(start, Arrays.asList(end));
-            if (tmp == null) {
-                return -1;
-            } else {
-                return tmp.get(end) == null ? -1 : tmp.get(end);
-            }
+        if (mat[i][j] == 'O') {
+          stones.add(new Point(i, j));
+          mat[i][j] = '.';
+          continue;
         }
-        Map<Point, Integer> in2StrapCount = this.bfsStonesDistances(start, trapsList);
-        if (in2StrapCount.keySet().size() < trapsList.size()) {
-            return -1;
+        if (mat[i][j] == 'M') {
+          triggers.add(new Point(i, j));
+          mat[i][j] = '.';
         }
-        Map<Point, Map<Point, Integer>> trap2StoneMap = new HashMap<>();
-        Set<Point> goodStoneSet = new HashSet<>();
-        for (Point trap : trapsList) {
-            Map<Point, Integer> stoneDistanceMap = bfsStonesDistances(trap, stoneSet);
-            if (stoneDistanceMap.isEmpty()) {
-                return -1;
-            } else {
-                trap2StoneMap.put(trap, stoneDistanceMap);
-                if (goodStoneSet.isEmpty()) {
-                    goodStoneSet.addAll(stoneDistanceMap.keySet());
-                }
-            }
-        }
-        Map<Point, Integer> inStonesMap = bfsStonesDistances(start, goodStoneSet);
-        if (inStonesMap.isEmpty()) {
-            return -1;
-        }
-        Map<Point, Integer> outMap = bfsStonesDistances(end, trapsList);
-        if (outMap.isEmpty()) {
-            return -1;
-        }
-        Map<Point, Integer> indexMap = new HashMap<>();
-        for (int i = 0; i < trapsList.size(); i++) {
-            indexMap.put(trapsList.get(i), i);
-        }
-        outTrapArr = new int[trapsList.size()];
-        for (Map.Entry<Point, Integer> ent : outMap.entrySet()) {
-            outTrapArr[indexMap.get(ent.getKey())] = ent.getValue();
-        }
-        // in to trap to strap ... to strap to end
-        // in to traps
-        in2trapDistance = new int[trapsList.size()];
-        for (int i = 0; i < trapsList.size(); i++) {
-            int distance = Integer.MAX_VALUE;
-            for (Point stone : goodStoneSet) {
-                distance = Math.min(distance, inStonesMap.get(stone) + trap2StoneMap.get(trapsList.get(i)).get(stone));
-            }
-            in2trapDistance[i] =  distance;
-        }
-        trap2trapDistance = new int[trapsList.size()][trapsList.size()];
-        for (int i = 0; i < trapsList.size(); i++) {
-            for (int j = 0; j < trapsList.size(); j++) {
-                if (i != j && trap2trapDistance[i][j] == 0) {
-                    int minDis = Integer.MAX_VALUE;
-                    for (Point stone : goodStoneSet) {
-                        minDis = Math.min(minDis, trap2StoneMap.get(trapsList.get(i)).get(stone) + trap2StoneMap.get(trapsList.get(j)).get(stone));
-                    }
-                    trap2trapDistance[i][j] = minDis;
-                    trap2trapDistance[j][i] = minDis;
-                }
-            }
-        }
-        // in totraps to end
-        index = new int[trapsList.size()];
-        for (int i = 0; i < index.length; i++) {
-            index[i] = i;
-        }
-        if (index.length == 1) {
-            return in2trapDistance[0] + outTrapArr[0];
-        }
-        minVCache = new HashMap<>();
-        minValue = Integer.MAX_VALUE;
-        return dfs(0, 0, -1);
+      }
     }
 
-    int[] in2trapDistance;
-    int[] outTrapArr;
-    int[][] trap2trapDistance;
-    List<Point> trapsList;
-    int[] index;
-    Map<String, Integer> minVCache;
-    private int minValue;   // 剪枝
+    // 起点(S) -> 石堆 -> 机关 -> 石堆 -> 机关 ... -> 石堆 -> 机关 -> 终点(T)
+    // 更为统一的: 把起点认为是机关, 终点认为是石堆, 比较方便
+    // 机关(S) -> 石堆 -> 机关 -> 石堆 -> 机关 ... -> 石堆 -> 机关 -> 石堆
+    triggers.add(startPoint);
+    stones.add(endPoint);
 
-    // "#....M....",
-    // "M..#...M..",
-    // "..OMO#SO.M",
-    // ".OOMOT.#OM
+    int p = stones.size() - 1;
+    int q = triggers.size() - 1;
 
-    private int dfs(int beforeSum, int level, int beforeIndex) {
-//        if (beforeSum >= minValue){
-//            return Integer.MAX_VALUE;
-//        }
-        String key = this.genIndexKey(beforeIndex);
-        if (minVCache.get(key) != null) {
-            return minVCache.get(key) + beforeSum;
-        }
-        int minDis = Integer.MAX_VALUE;
-        if (level == 0) {
-            for (int i = 0; i < index.length; i++) {
-                index[i] = -1;
-                int dis = dfs(in2trapDistance[i], level + 1, i);
-                minDis = Math.min(minDis, dis);
-                minValue = Math.min(minValue, minDis);
-                index[i] = i;
-            }
-            return minDis;
-        } else if (level == index.length - 1) {
-            for (int i = 0; i < index.length; i++) {
-                if (index[i] == i) {
-                    minDis = beforeSum + trap2trapDistance[i][beforeIndex] + outTrapArr[i];
-                    minValue = Math.min(minValue, minDis);
-                    break;
-                }
-            }
-            return minDis;
-        } else {
-//            boolean isBreak = false;
-            for (int i = 0; i < index.length; i++) {
-                if (index[i] == i) {
-                    index[i] = -1;
-                    int thisDis = dfs(beforeSum + trap2trapDistance[i][beforeIndex], level + 1, i);
-                    minDis = Math.min(minDis, thisDis);
-                    index[i] = i;
-//                    if (thisDis == Integer.MAX_VALUE) {
-//                        isBreak = true;
-//                    }
-                }
-            }
-//            if (!isBreak) {
-                minVCache.put(key, minDis - beforeSum);
-//            }
-            return minDis;
-        }
+    // 初始化 tsDist 数组: 计算任意一个机关(trigger) i 到任意一个石堆(stone) j 的距离
+    for (int i = 0; i <= q; i++) {
+      for (int j = 0; j <= p; j++) {
+        tsDist[i][j] = bfs(triggers.get(i), stones.get(j), mat);
+      }
     }
 
-    private String genIndexKey(int beforeIndex) {
-        StringBuilder result = new StringBuilder();
-        result.append("[" + beforeIndex +"]");
-        for (Integer i : index) {
-            result.append("[" + i + "]");
+    // 初始化 ttDist 数组：当前位于第 i 个机关，下一步要开启第 j 个机关，最少要走多少步
+    // 即第 i 个机关走向某个石堆 k，再从该石堆走向机关 j 的步数, floyd
+    for (int i = 0; i <= q; i++) {
+      for (int j = 0; j <= q; j++) {
+        ttDist[i][j] = INF;
+        // 枚举石堆, 不算终点
+        for (int k = 0; k < p; k++) {
+          if (tsDist[i][k] == -1 || tsDist[j][k] == -1) continue;
+          int cost = tsDist[i][k] + tsDist[j][k];
+          ttDist[i][j] = Math.min(ttDist[i][j], cost);
         }
-        return result.toString();
+      }
     }
 
-    private Map<Point, Integer> bfsStonesDistances(Point start, Collection<Point> ends) {
-        Map<Point, Integer> resultMap = new HashMap<>();
-        int[][] distances = new int[cMaze.length][cMaze[0].length];
-        for (int i = 0; i < distances.length; i++) {
-            Arrays.fill(distances[i], cMaze.length * cMaze[0].length + 1);
+    // 初始化 dp 数组
+    for (int[] a : f) {
+      Arrays.fill(a, -1);
+    }
+    // 最后一个起点0表示未开启。
+    f[q][0] = 0;
+
+    // 枚举机关所有状态 staus
+    int lim = 1 << q;
+    for (int s = 0; s < lim; s++) {
+      // 枚举位于第 i 个机关
+      for (int i = 0; i <= q; i++) {
+        if (f[i][s] == -1) continue;
+        // 枚举下一步开启机关 j
+        for (int j = 0; j < q; j++) {
+          // 相同机关, 继续
+          if (i == j) continue;
+          // 机关被开启了, 继续
+          if (((s >> j) & 1) != 0) continue;
+          // 第i个机关到第j个机关走不通, 继续
+          if (ttDist[i][j] == INF) continue;
+          int cost = ttDist[i][j];
+          int ns = s | (1 << j);
+          if (f[j][ns] == -1 || f[j][ns] > f[i][s] + cost) {
+            f[j][ns] = f[i][s] + cost;
+          }
         }
-        int currDistance = 0;
-        LinkedList<Point> queue = new LinkedList<>();
-        queue.add(start);
-        while (!queue.isEmpty()) {
-            int currSize = queue.size();
-            for (int i = 0; i < currSize; i++) {
-                Point point = queue.pop();
-                if (cMaze[point.x][point.y] != ban && distances[point.x][point.y] > currDistance) {
-                    distances[point.x][point.y] = currDistance;
-                    if (ends.contains(point)) {
-                        resultMap.put(point, currDistance);
-                        if (resultMap.size() == ends.size()) {
-                            return resultMap;
-                        }
-                    }
-                    if (point.x - 1 >= 0) {
-                        queue.add(new Point(point.x - 1, point.y));
-                    }
-                    if (point.x + 1 < cMaze.length) {
-                        queue.add(new Point(point.x + 1, point.y));
-                    }
-                    if (point.y - 1 >= 0) {
-                        queue.add(new Point(point.x, point.y - 1));
-                    }
-                    if (point.y + 1 < cMaze[0].length) {
-                        queue.add(new Point(point.x, point.y + 1));
-                    }
-                }
-            }
-            currDistance++;
-        }
-        return resultMap;
+      }
     }
 
-    static class Point {
-        private int x;
-        private int y;
-
-        public Point(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Point point = (Point) o;
-            return x == point.x &&
-                    y == point.y;
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(x, y);
-        }
-
-        @Override
-        public String toString() {
-            return "Point{" +
-                    "x=" + x +
-                    ", y=" + y +
-                    '}';
-        }
+    int res = INF;
+    for (int i = 0; i <= q; i++) {
+      if (f[i][lim - 1] == -1) {
+        continue;
+      }
+      if (tsDist[i][p] == -1) {
+        continue;
+      }
+      int cur = f[i][lim - 1] + tsDist[i][p];
+      res = Math.min(res, cur);
     }
+    return res == INF ? -1 : res;
+  }
+
+
+  /**
+   * BFS: 从给定起点到给定终点最少需要走多少步
+   *
+   * @param from 起点
+   * @param to   终点
+   * @return 步数
+   */
+  private int bfs(Point from, Point to, char[][] maze) {
+    // 特判: 如果是墙壁, 返回-1
+    if (maze[from.x][from.y] == '#') {
+      return -1;
+    }
+    // 初始化 dist 数组
+    for (int[] a : dist) {
+      Arrays.fill(a, -1);
+    }
+    queue.offer(from);
+    dist[from.x][from.y] = 0;
+
+    while (!queue.isEmpty()) {
+      Point cur = queue.poll();
+      int x = cur.x;
+      int y = cur.y;
+      for (int i = 0; i < 4; i++) {
+        int nx = x + dir[i];
+        int ny = y + dir[i + 1];
+        if (nx < 0 || nx >= n || ny < 0 || ny >= m || maze[nx][ny] == '#') continue;
+        if (dist[nx][ny] == -1) {
+          dist[nx][ny] = dist[x][y] + 1;
+          queue.offer(new Point(nx, ny));
+        }
+      }
+    }
+    return dist[to.x][to.y];
+  }
+
+}
+
+class Point {
+  int x, y;
+
+  public Point() {
+  }
+
+  public Point(int x, int y) {
+    this.x = x;
+    this.y = y;
+  }
 }

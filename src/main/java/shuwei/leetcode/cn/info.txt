@@ -234,3 +234,13 @@
   shuwei.leetcode.cn.one.three.nine.two
 104. 二叉树的最大深度
   shuwei.leetcode.cn.one.zero.four
+LCP 13. 寻宝
+  shuwei.leetcode.cn.mst.unknown
+343. 整数拆分
+  shuwei.leetcode.cn.three.four.three
+面试题 08.03. 魔术索引
+  shuwei.leetcode.cn.zero.right.zero.three
+632. 最小区间
+  shuwei.leetcode.cn.six.three.two
+114. 二叉树展开为链表
+  shuwei.leetcode.cn.one.one.four
