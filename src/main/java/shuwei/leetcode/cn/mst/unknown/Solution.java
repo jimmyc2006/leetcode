@@ -8,183 +8,152 @@ import java.util.Queue;
 
 class Solution {
 
-  private int[][] dist;
-  private Queue<Point> queue;
-  private int[] dir = {-1, 0, 1, 0, -1};  // 压缩方向数组，二维变一维, {-1,0},{0,1},{1,0},{0,-1}
-  private int n;
-  private int m;
-  private int[][] tsDist; // trigger to stone dist
-  private int[][] ttDist;  // trigger to trigger dist
-  private int[][] f;
-  private int INF = 0x3f3f3f3f;
+  int[] dx = {1, -1, 0, 0};
+  int[] dy = {0, 0, 1, -1};
+  int n, m;
 
   public int minimalSteps(String[] maze) {
-    this.n = maze.length;
-    this.m = maze[0].length();
-    dist = new int[150][150];
-    tsDist = new int[20][45];
-    ttDist = new int[20][20];
-    f = new int[20][1 << 16];
-    queue = new LinkedList<>();
-
-    Point startPoint = null;
-    Point endPoint = null;
-    List<Point> stones = new ArrayList<>();
-    List<Point> triggers = new ArrayList<>();
-
-    // 为了方便, string maze -> matrix
-    char[][] mat = new char[n][m];
+    n = maze.length;
+    m = maze[0].length();
+    // 机关 & 石头
+    List<int[]> buttons = new ArrayList<int[]>();
+    List<int[]> stones = new ArrayList<int[]>();
+    // 起点 & 终点
+    int sx = -1, sy = -1, tx = -1, ty = -1;
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
-        mat[i][j] = maze[i].charAt(j);
-      }
-    }
-    // init maze
-    for (int i = 0; i < n; i++) {
-      for (int j = 0; j < m; j++) {
-        if (mat[i][j] == 'S') {
-          startPoint = new Point(i, j);
-          mat[i][j] = '.';
-          continue;
+        if (maze[i].charAt(j) == 'M') {
+          buttons.add(new int[]{i, j});
         }
-        if (mat[i][j] == 'T') {
-          endPoint = new Point(i, j);
-          mat[i][j] = '.';
-          continue;
+        if (maze[i].charAt(j) == 'O') {
+          stones.add(new int[]{i, j});
         }
-        if (mat[i][j] == 'O') {
-          stones.add(new Point(i, j));
-          mat[i][j] = '.';
-          continue;
+        if (maze[i].charAt(j) == 'S') {
+          sx = i;
+          sy = j;
         }
-        if (mat[i][j] == 'M') {
-          triggers.add(new Point(i, j));
-          mat[i][j] = '.';
+        if (maze[i].charAt(j) == 'T') {
+          tx = i;
+          ty = j;
         }
       }
     }
+    int nb = buttons.size();
+    int ns = stones.size();
+    int[][] startDist = bfs(sx, sy, maze);
 
-    // 起点(S) -> 石堆 -> 机关 -> 石堆 -> 机关 ... -> 石堆 -> 机关 -> 终点(T)
-    // 更为统一的: 把起点认为是机关, 终点认为是石堆, 比较方便
-    // 机关(S) -> 石堆 -> 机关 -> 石堆 -> 机关 ... -> 石堆 -> 机关 -> 石堆
-    triggers.add(startPoint);
-    stones.add(endPoint);
-
-    int p = stones.size() - 1;
-    int q = triggers.size() - 1;
-
-    // 初始化 tsDist 数组: 计算任意一个机关(trigger) i 到任意一个石堆(stone) j 的距离
-    for (int i = 0; i <= q; i++) {
-      for (int j = 0; j <= p; j++) {
-        tsDist[i][j] = bfs(triggers.get(i), stones.get(j), mat);
-      }
+    // 边界情况：没有机关
+    if (nb == 0) {
+      return startDist[tx][ty];
+    }
+    // 从某个机关到其他机关 / 起点与终点的最短距离。
+    int[][] dist = new int[nb][nb + 2];
+    for (int i = 0; i < nb; i++) {
+      Arrays.fill(dist[i], -1);
+    }
+    // 中间结果
+    int[][][] dd = new int[nb][][];
+    for (int i = 0; i < nb; i++) {
+      int[][] d = bfs(buttons.get(i)[0], buttons.get(i)[1], maze);
+      dd[i] = d;
+      // 从某个点到终点不需要拿石头
+      dist[i][nb + 1] = d[tx][ty];
     }
 
-    // 初始化 ttDist 数组：当前位于第 i 个机关，下一步要开启第 j 个机关，最少要走多少步
-    // 即第 i 个机关走向某个石堆 k，再从该石堆走向机关 j 的步数, floyd
-    for (int i = 0; i <= q; i++) {
-      for (int j = 0; j <= q; j++) {
-        ttDist[i][j] = INF;
-        // 枚举石堆, 不算终点
-        for (int k = 0; k < p; k++) {
-          if (tsDist[i][k] == -1 || tsDist[j][k] == -1) continue;
-          int cost = tsDist[i][k] + tsDist[j][k];
-          ttDist[i][j] = Math.min(ttDist[i][j], cost);
+    for (int i = 0; i < nb; i++) {
+      int tmp = -1;
+      for (int k = 0; k < ns; k++) {
+        int midX = stones.get(k)[0], midY = stones.get(k)[1];
+        if (dd[i][midX][midY] != -1 && startDist[midX][midY] != -1) {
+          if (tmp == -1 || tmp > dd[i][midX][midY] + startDist[midX][midY]) {
+            tmp = dd[i][midX][midY] + startDist[midX][midY];
+          }
         }
       }
+      dist[i][nb] = tmp;
+      for (int j = i + 1; j < nb; j++) {
+        int mn = -1;
+        for (int k = 0; k < ns; k++) {
+          int midX = stones.get(k)[0], midY = stones.get(k)[1];
+          if (dd[i][midX][midY] != -1 && dd[j][midX][midY] != -1) {
+            if (mn == -1 || mn > dd[i][midX][midY] + dd[j][midX][midY]) {
+              mn = dd[i][midX][midY] + dd[j][midX][midY];
+            }
+          }
+        }
+        dist[i][j] = mn;
+        dist[j][i] = mn;
+      }
     }
 
-    // 初始化 dp 数组
-    for (int[] a : f) {
-      Arrays.fill(a, -1);
+    // 无法达成的情形
+    for (int i = 0; i < nb; i++) {
+      if (dist[i][nb] == -1 || dist[i][nb + 1] == -1) {
+        return -1;
+      }
     }
-    // 最后一个起点0表示未开启。
-    f[q][0] = 0;
 
-    // 枚举机关所有状态 staus
-    int lim = 1 << q;
-    for (int s = 0; s < lim; s++) {
-      // 枚举位于第 i 个机关
-      for (int i = 0; i <= q; i++) {
-        if (f[i][s] == -1) continue;
-        // 枚举下一步开启机关 j
-        for (int j = 0; j < q; j++) {
-          // 相同机关, 继续
-          if (i == j) continue;
-          // 机关被开启了, 继续
-          if (((s >> j) & 1) != 0) continue;
-          // 第i个机关到第j个机关走不通, 继续
-          if (ttDist[i][j] == INF) continue;
-          int cost = ttDist[i][j];
-          int ns = s | (1 << j);
-          if (f[j][ns] == -1 || f[j][ns] > f[i][s] + cost) {
-            f[j][ns] = f[i][s] + cost;
+    // dp 数组， -1 代表没有遍历到
+    int[][] dp = new int[1 << nb][nb];
+    for (int i = 0; i < 1 << nb; i++) {
+      Arrays.fill(dp[i], -1);
+    }
+    for (int i = 0; i < nb; i++) {
+      dp[1 << i][i] = dist[i][nb];
+    }
+
+    // 由于更新的状态都比未更新的大，所以直接从小到大遍历即可
+    for (int mask = 1; mask < (1 << nb); mask++) {
+      for (int i = 0; i < nb; i++) {
+        // 当前 dp 是合法的
+        if ((mask & (1 << i)) != 0) {
+          for (int j = 0; j < nb; j++) {
+            // j 不在 mask 里
+            if ((mask & (1 << j)) == 0) {
+              int next = mask | (1 << j);
+              if (dp[next][j] == -1 || dp[next][j] > dp[mask][i] + dist[i][j]) {
+                dp[next][j] = dp[mask][i] + dist[i][j];
+              }
+            }
           }
         }
       }
     }
 
-    int res = INF;
-    for (int i = 0; i <= q; i++) {
-      if (f[i][lim - 1] == -1) {
-        continue;
+    int ret = -1;
+    int finalMask = (1 << nb) - 1;
+    for (int i = 0; i < nb; i++) {
+      if (ret == -1 || ret > dp[finalMask][i] + dist[i][nb + 1]) {
+        ret = dp[finalMask][i] + dist[i][nb + 1];
       }
-      if (tsDist[i][p] == -1) {
-        continue;
-      }
-      int cur = f[i][lim - 1] + tsDist[i][p];
-      res = Math.min(res, cur);
     }
-    return res == INF ? -1 : res;
+
+    return ret;
   }
 
-
-  /**
-   * BFS: 从给定起点到给定终点最少需要走多少步
-   *
-   * @param from 起点
-   * @param to   终点
-   * @return 步数
-   */
-  private int bfs(Point from, Point to, char[][] maze) {
-    // 特判: 如果是墙壁, 返回-1
-    if (maze[from.x][from.y] == '#') {
-      return -1;
+  public int[][] bfs(int x, int y, String[] maze) {
+    int[][] ret = new int[n][m];
+    for (int i = 0; i < n; i++) {
+      Arrays.fill(ret[i], -1);
     }
-    // 初始化 dist 数组
-    for (int[] a : dist) {
-      Arrays.fill(a, -1);
-    }
-    queue.offer(from);
-    dist[from.x][from.y] = 0;
-
+    ret[x][y] = 0;
+    Queue<int[]> queue = new LinkedList<int[]>();
+    queue.offer(new int[]{x, y});
     while (!queue.isEmpty()) {
-      Point cur = queue.poll();
-      int x = cur.x;
-      int y = cur.y;
-      for (int i = 0; i < 4; i++) {
-        int nx = x + dir[i];
-        int ny = y + dir[i + 1];
-        if (nx < 0 || nx >= n || ny < 0 || ny >= m || maze[nx][ny] == '#') continue;
-        if (dist[nx][ny] == -1) {
-          dist[nx][ny] = dist[x][y] + 1;
-          queue.offer(new Point(nx, ny));
+      int[] p = queue.poll();
+      int curx = p[0], cury = p[1];
+      for (int k = 0; k < 4; k++) {
+        int nx = curx + dx[k], ny = cury + dy[k];
+        if (inBound(nx, ny) && maze[nx].charAt(ny) != '#' && ret[nx][ny] == -1) {
+          ret[nx][ny] = ret[curx][cury] + 1;
+          queue.offer(new int[]{nx, ny});
         }
       }
     }
-    return dist[to.x][to.y];
+    return ret;
   }
 
-}
-
-class Point {
-  int x, y;
-
-  public Point() {
-  }
-
-  public Point(int x, int y) {
-    this.x = x;
-    this.y = y;
+  public boolean inBound(int x, int y) {
+    return x >= 0 && x < n && y >= 0 && y < m;
   }
 }
