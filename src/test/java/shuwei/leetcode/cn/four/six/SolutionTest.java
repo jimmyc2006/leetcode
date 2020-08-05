@@ -12,5 +12,7 @@ public class SolutionTest {
   public void test() {
     Solution s = new Solution();
     System.out.println(s.permute(new int[] {1, 2, 3}));
+    System.out.println(s.permute(new int[] {}));
+    System.out.println(s.permute(new int[] {1}));
   }
 }
