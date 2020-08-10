@@ -13,7 +13,9 @@ public class SolutionTest {
   @Test
   public void test() {
     Solution s = new Solution();
+    Assert.assertEquals(5, s.reversePairs(new int[] {2, 4, 3, 5, 1}));
     Assert.assertEquals(5, s.reversePairs(new int[] {7, 5, 6, 4}));
     Assert.assertEquals(4, s.reversePairs(new int[] {1, 3, 2, 3, 1}));
+    Assert.assertEquals(0, s.reversePairs(new int[] {}));
   }
 }
