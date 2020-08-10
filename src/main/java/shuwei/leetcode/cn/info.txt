@@ -250,3 +250,5 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.two.zero.seven
 337. 打家劫舍 III
   shuwei.leetcode.cn.three.three.seven
+696. 计数二进制子串
+  shuwei.leetcode.cn.six.nine.six
