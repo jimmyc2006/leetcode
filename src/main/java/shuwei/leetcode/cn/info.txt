@@ -252,3 +252,5 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.three.three.seven
 696. 计数二进制子串
   shuwei.leetcode.cn.six.nine.six
+130. 被围绕的区域
+  shuwei.leetcode.cn.one.three.zero
