@@ -250,3 +250,11 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.two.zero.seven
 337. 打家劫舍 III
   shuwei.leetcode.cn.three.three.seven
+336. 回文对
+  shuwei.leetcode.cn.three.three.six
+100. 相同的树
+  shuwei.leetcode.cn.one.zero.zero
+99. 恢复二叉搜索树
+  shuwei.leetcode.cn.nine.nine
+93. 复原IP地址
+  shuwei.leetcode.cn.nine.three
