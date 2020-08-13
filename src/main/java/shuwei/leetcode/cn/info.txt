@@ -256,3 +256,5 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.one.three.zero
 133. 克隆图
   shuwei.leetcode.cn.one.three.three
+43. 字符串相乘
+  shuwei.leetcode.cn.four.three
