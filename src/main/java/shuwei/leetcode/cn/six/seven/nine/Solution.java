@@ -45,6 +45,7 @@ public class Solution {
                     return true;
                   }
                   float group2 = cal(nums[x], nums[y], o3);
+                  // (n1 op n2) op (n3 op n4)的情况
                   for (int o4 = 0; o4 < 4; o4++) {
                     if(isGood(cal(result1, group2, o4))) {
                       return true;

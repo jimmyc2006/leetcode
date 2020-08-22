@@ -12,5 +12,6 @@ public class SolutionTest {
     Assert.assertEquals(3, s.countSubstrings("abc"));
     Assert.assertEquals(6, s.countSubstrings("aaa"));
     Assert.assertEquals(15, s.countSubstrings("aaaaa"));
+    Assert.assertEquals(77, s.countSubstrings("dnncbwoneinoplypwgbwktmvkoimcooyiwirgbxlcttgteqthcvyoueyftiwgwwxvxvg"));
   }
 }

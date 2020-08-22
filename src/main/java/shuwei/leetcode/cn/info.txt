@@ -274,7 +274,7 @@ LCP 13. 寻宝
   shuwei.leetcode.one.one.zero
 109. 有序链表转换二叉搜索树
   shuwei.leetcode.one.zero.nine
-647. 回文子串
+647. 回文子串 dp，马拉车
   shuwei.leetcode.cn.six.four.seven
 529. 扫雷游戏
   shuwei.leetcode.cn.five.two.nine
