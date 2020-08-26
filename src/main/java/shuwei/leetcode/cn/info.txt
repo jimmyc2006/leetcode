@@ -282,3 +282,11 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.one.one.one
 679. 24 点游戏
   shuwei.leetcode.cn.six.seven.nine
+201. 数字范围按位与
+  shuwei.leetcode.cn.two.zero.one
+459. 重复的子字符串
+  shuwei.leetcode.cn.four.five.nine
+491. 递增子序列
+  shuwei.leetcode.cn.four.nine.one
+17. 电话号码的字母组合
+  shuwei.leetcode.cn.one.seven

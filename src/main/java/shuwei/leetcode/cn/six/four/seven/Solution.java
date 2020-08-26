@@ -26,7 +26,7 @@ public class Solution {
    * 依此类推...
    * 最后合并结果是向下/2取整综合
    * 这其中,增加@#!是固定写法，最后取整也是固定写法，注意@#!必须互相不同
-   * 
+   *
    */
   public int countSubstrings(String s) {
     char[] oldChars = s.toCharArray();
