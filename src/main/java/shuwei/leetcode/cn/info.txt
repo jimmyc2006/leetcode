@@ -290,3 +290,7 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.four.nine.one
 17. 电话号码的字母组合
   shuwei.leetcode.cn.one.seven
+332. 重新安排行程
+  shuwei.leetcode.cn.three.three.two
+657. 机器人能否返回原点
+  shuwei.leetcode.cn.six.five.seven
