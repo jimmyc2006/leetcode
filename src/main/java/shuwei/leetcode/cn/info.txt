@@ -296,3 +296,7 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.six.five.seven
 214. 最短回文串
   shuwei.leetcode.cn.two.one.four
+557. 反转字符串中的单词 III
+  shuwei.leetcode.cn.five.five.seven
+841. 钥匙和房间
+  shuwei.leetcode.cn.eight.four.one
