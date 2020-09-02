@@ -300,3 +300,7 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.five.five.seven
 841. 钥匙和房间
   shuwei.leetcode.cn.eight.four.one
+486. 预测赢家
+  shuwei.leetcode.cn.four.eight.six
+剑指 Offer 20. 表示数值的字符串
+  shuwei.leetcode.cn.jz.two.zero
