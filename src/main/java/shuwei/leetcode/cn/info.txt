@@ -304,3 +304,5 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.four.eight.six
 剑指 Offer 20. 表示数值的字符串
   shuwei.leetcode.cn.jz.two.zero
+51. N 皇后
+  shuwei.leetcode.cn.five.one
