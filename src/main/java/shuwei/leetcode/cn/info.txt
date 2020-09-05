@@ -308,3 +308,5 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.five.one
 257. 二叉树的所有路径
   shuwei.leetcode.cn.two.five.seven
+60. 第k个排列
+  shuwei.leetcode.cn.six.zero
