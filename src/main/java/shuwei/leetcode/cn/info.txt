@@ -326,3 +326,9 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.six.three.seven
 79. 单词搜索
   shuwei.leetcode.cn.seven.nine
+94. 二叉树的中序遍历
+  shuwei.leetcode.cn.nine.four
+37. 解数独
+  shuwei.leetcode.cn.three.seven
+226. 翻转二叉树
+  shuwei.leetcode.cn.two.two.six
