@@ -332,3 +332,10 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.three.seven
 226. 翻转二叉树
   shuwei.leetcode.cn.two.two.six
+685. 冗余连接 II(9.17)
+  shuwei.leetcode.cn.six.eight.five
+47. 全排列 II
+  shuwei.leetcode.cn.four.seven
+shuwei.improve.pangzi
+404. 左叶子之和
+  shuwei.leetcode.cn.four.zero.four
