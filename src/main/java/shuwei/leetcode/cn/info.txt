@@ -339,3 +339,9 @@ LCP 13. 寻宝
 shuwei.improve.pangzi
 404. 左叶子之和
   shuwei.leetcode.cn.four.zero.four
+78. 子集
+  shuwei.leetcode.cn.seven.eight
+538. 把二叉搜索树转换为累加树
+  shuwei.leetcode.cn.five.three.eight
+968. 监控二叉树
+  shuwei.leetcode.cn.nine.six.eight
