@@ -7,8 +7,25 @@ import java.util.List;
 import shuwei.leetcode.cn.TreeNode;
 
 public class Solution {
-  public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
-    return null;
+
+  /**
+   * 看题解的既简洁又搞笑的解法
+   * @param root
+   * @param p
+   * @param q
+   * @return
+   */
+  public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    while (true) {
+      if (p.val < root.val && q.val < root.val) {
+        root = root.left;
+      } else if (p.val > root.val && q.val > root.val) {
+        root = root.right;
+      } else {
+        break;
+      }
+    }
+    return root;
   }
 
   /**
@@ -20,7 +37,7 @@ public class Solution {
    * @param q
    * @return
    */
-  public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+  public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
     findCount = 0;
     find(root, p, q, new LinkedList<>());
     int count = 0;
