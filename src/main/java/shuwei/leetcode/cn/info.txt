@@ -266,3 +266,7 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.one.three.three
 43. 字符串相乘
   shuwei.leetcode.cn.four.three
+20. 有效的括号
+  shuwei.leetcode.cn.two.zero
+701. 二叉搜索树中的插入操作
+  shuwei.leetcode.cn.seven.zero.one
