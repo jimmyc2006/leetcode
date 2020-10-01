@@ -268,6 +268,97 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.four.three
 20. 有效的括号
   shuwei.leetcode.cn.two.zero
+546. 移除盒子
+  shuwei.leetcode.cn.five.four.six
+733. 图像渲染
+  shuwei.leetcode.seven.three.three
+110. 平衡二叉树
+  shuwei.leetcode.one.one.zero
+109. 有序链表转换二叉搜索树
+  shuwei.leetcode.one.zero.nine
+647. 回文子串 dp，马拉车
+  shuwei.leetcode.cn.six.four.seven
+529. 扫雷游戏
+  shuwei.leetcode.cn.five.two.nine
+111. 二叉树的最小深度
+  shuwei.leetcode.cn.one.one.one
+679. 24 点游戏
+  shuwei.leetcode.cn.six.seven.nine
+201. 数字范围按位与
+  shuwei.leetcode.cn.two.zero.one
+459. 重复的子字符串
+  shuwei.leetcode.cn.four.five.nine
+491. 递增子序列
+  shuwei.leetcode.cn.four.nine.one
+17. 电话号码的字母组合
+  shuwei.leetcode.cn.one.seven
+332. 重新安排行程,这个欧拉路径要记住自己的算法
+  shuwei.leetcode.cn.three.three.two
+657. 机器人能否返回原点(08.28)
+  shuwei.leetcode.cn.six.five.seven
+214. 最短回文串(08.29)
+  shuwei.leetcode.cn.two.one.four
+557. 反转字符串中的单词 III(08.30) -- 这个题体现了字符串换顺序的时候，交换字符数组内容比新建字符串快
+  shuwei.leetcode.cn.five.five.seven
+841. 钥匙和房间(08.31) -- 体现了一种类似广度优先的处理方法
+  shuwei.leetcode.cn.eight.four.one
+486. 预测赢家(09.01) -- dp
+  shuwei.leetcode.cn.four.eight.six
+剑指 Offer 20. 表示数值的字符串(09.02)
+  shuwei.leetcode.cn.jz.two.zero
+51. N 皇后(09.03)
+  shuwei.leetcode.cn.five.one
+257. 二叉树的所有路径(09.04)
+  shuwei.leetcode.cn.two.five.seven
+60. 第k个排列(09.05)
+  shuwei.leetcode.cn.six.zero
+107. 二叉树的层次遍历 II(09.06)
+  shuwei.leetcode.cn.one.zero.seven
+347. 前 K 个高频元素(09.07)
+  shuwei.leetcode.cn.three.four.seven
+77. 组合(09.08)
+  shuwei.leetcode.cn.seven.seven
+39. 组合总和(09.09)
+  shuwei.leetcode.cn.three.nine
+40. 组合总和 II
+  shuwei.leetcode.cn.four.zero
+216. 组合总和 III
+  shuwei.leetcode.cn.two.one.six
+637. 二叉树的层平均值
+  shuwei.leetcode.cn.six.three.seven
+79. 单词搜索
+  shuwei.leetcode.cn.seven.nine
+94. 二叉树的中序遍历
+  shuwei.leetcode.cn.nine.four
+37. 解数独
+  shuwei.leetcode.cn.three.seven
+226. 翻转二叉树
+  shuwei.leetcode.cn.two.two.six
+685. 冗余连接 II(9.17)
+  shuwei.leetcode.cn.six.eight.five
+47. 全排列 II
+  shuwei.leetcode.cn.four.seven
+shuwei.improve.pangzi
+404. 左叶子之和
+  shuwei.leetcode.cn.four.zero.four
+78. 子集
+  shuwei.leetcode.cn.seven.eight
+538. 把二叉搜索树转换为累加树
+  shuwei.leetcode.cn.five.three.eight
+968. 监控二叉树
+  shuwei.leetcode.cn.nine.six.eight
+617. 合并二叉树
+  shuwei.leetcode.cn.six.one.seven
+501. 二叉搜索树中的众数
+  shuwei.leetcode.cn.five.zero.one
+106. 从中序与后序遍历序列构造二叉树
+  shuwei.leetcode.cn.one.zero.six
+113. 路径总和 II
+  shuwei.leetcode.cn.one.one.three
+235. 二叉搜索树的最近公共祖先
+  shuwei.leetcode.cn.two.three.five
+117. 填充每个节点的下一个右侧节点指针 II
+  shuwei.leetcode.cn.one.one.seven
 701. 二叉搜索树中的插入操作
   shuwei.leetcode.cn.seven.zero.one
 LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp，还有数学算法)

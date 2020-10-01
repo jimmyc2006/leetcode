@@ -1,5 +1,6 @@
 package shuwei.improve.accu.string;
 
+// 2020-08-29适用一次
 public class Kmp {
 
   public int kmpMatch(String src, String pattern) {
