@@ -367,3 +367,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.seven.seven.one
 18. 四数之和 比较有代表性的前后指针+剪枝优化
   shuwei.leetcode.cn.one.eight
+834. 树中距离之和 (比较复杂的思路题,自己做出来感觉流程不太顺，还是要研究下题解里面的代码)
+  shuwei.leetcode.cn.eight.three.four
+75. 颜色分类(这是一个普通思路题，使用交换的思路)
+  shuwei.leetcode.cn.seven.five
