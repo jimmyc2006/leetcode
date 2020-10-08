@@ -7,21 +7,89 @@ import java.util.List;
 
 public class Solution {
 
+    int[] ans;
+    int[] sz;
+    int[] dp;
+    List<List<Integer>> graph;
+
     /**
+     * 官方题解
+     * @param N
+     * @param edges
+     * @return
+     */
+    public int[] sumOfDistancesInTree(int N, int[][] edges) {
+        ans = new int[N];
+        sz = new int[N];
+        dp = new int[N];
+        graph = new ArrayList<List<Integer>>();
+        for (int i = 0; i < N; ++i) {
+            graph.add(new ArrayList<Integer>());
+        }
+        for (int[] edge: edges) {
+            int u = edge[0], v = edge[1];
+            graph.get(u).add(v);
+            graph.get(v).add(u);
+        }
+        dfs(0, -1);
+        dfs2(0, -1);
+        return ans;
+    }
+
+    public void dfs(int u, int f) {
+        sz[u] = 1;
+        dp[u] = 0;
+        for (int v: graph.get(u)) {
+            if (v == f) {
+                continue;
+            }
+            dfs(v, u);
+            dp[u] += dp[v] + sz[v];
+            sz[u] += sz[v];
+        }
+    }
+
+    public void dfs2(int u, int f) {
+        ans[u] = dp[u];
+        for (int v: graph.get(u)) {
+            if (v == f) {
+                continue;
+            }
+            int pu = dp[u], pv = dp[v];
+            int su = sz[u], sv = sz[v];
+
+            dp[u] -= dp[v] + sz[v];
+            sz[u] -= sz[v];
+            dp[v] += dp[u] + sz[u];
+            sz[v] += sz[u];
+
+            dfs2(v, u);
+
+            dp[u] = pu;
+            dp[v] = pv;
+            sz[u] = su;
+            sz[v] = sv;
+        }
+    }
+
+    /**
+     * 能通过的解法，效率还可
      * 从某一个点开始遍历，2个数组，1个记录分值，一个记录个数
      * 不管多少个分支，只分为入和出
      * @param N
      * @param edges
      * @return
      */
-    public int[] sumOfDistancesInTree(int N, int[][] edges) {
+    public int[] sumOfDistancesInTree3(int N, int[][] edges) {
         if (N == 1){
             return new int[]{0};
         }
         this.N = N;
         int[] score = new int[N];
+        // count数组不能省略，因为根据某个点的score推导不出来它的count
         int[] count = new int[N];
         List<Integer>[] relations = new List[N];
+        // 这种写法用foreach会好一些
         for (int i = 0; i < edges.length; i++) {
             int x = edges[i][0];
             int y = edges[i][1];
@@ -87,6 +155,7 @@ public class Solution {
 
     /**
      * floyd算法,超出内存限制
+     * 不过floyd算法代码还是比较优雅
      * @param N
      * @param edges
      * @return
@@ -138,6 +207,7 @@ public class Solution {
     }
 
     /**
+     * 这个解法是错误的
      * 感觉这个题应该是一个dp问题
      * 0,1 能计算出0到1的距离是1
      * 0,2 计算出0到2的距离是1
