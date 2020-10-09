@@ -266,6 +266,8 @@ LCP 13. 寻宝
   shuwei.leetcode.cn.one.three.three
 43. 字符串相乘
   shuwei.leetcode.cn.four.three
+20. 有效的括号
+  shuwei.leetcode.cn.two.zero
 546. 移除盒子
   shuwei.leetcode.cn.five.four.six
 733. 图像渲染
@@ -359,3 +361,19 @@ shuwei.improve.pangzi
   shuwei.leetcode.cn.one.one.seven
 145. 二叉树的后序遍历
   shuwei.leetcode.cn.one.four.five
+701. 二叉搜索树中的插入操作
+  shuwei.leetcode.cn.seven.zero.one
+LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp，还有数学算法)
+  shuwei.leetcode.cn.lcp.one.nine
+771. 宝石与石头
+  shuwei.leetcode.cn.seven.seven.one
+18. 四数之和 比较有代表性的前后指针+剪枝优化
+  shuwei.leetcode.cn.one.eight
+834. 树中距离之和 (比较复杂的思路题,自己做出来感觉流程不太顺，还是要研究下题解里面的代码)
+  shuwei.leetcode.cn.eight.three.four
+75. 颜色分类(这是一个普通思路题，使用交换的思路)
+  shuwei.leetcode.cn.seven.five
+344. 反转字符串
+  shuwei.leetcode.cn.three.four.four
+141. 环形链表
+  shuwei.leetcode.cn.one.four.one
