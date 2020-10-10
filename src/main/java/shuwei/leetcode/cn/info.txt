@@ -359,6 +359,8 @@ shuwei.improve.pangzi
   shuwei.leetcode.cn.two.three.five
 117. 填充每个节点的下一个右侧节点指针 II
   shuwei.leetcode.cn.one.one.seven
+145. 二叉树的后序遍历
+  shuwei.leetcode.cn.one.four.five
 701. 二叉搜索树中的插入操作
   shuwei.leetcode.cn.seven.zero.one
 LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp，还有数学算法)
@@ -373,3 +375,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.seven.five
 344. 反转字符串(简单)
   shuwei.leetcode.cn.three.four.four
+344. 反转字符串
+  shuwei.leetcode.cn.three.four.four
+141. 环形链表
+  shuwei.leetcode.cn.one.four.one
