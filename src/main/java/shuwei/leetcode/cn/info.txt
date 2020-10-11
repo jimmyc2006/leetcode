@@ -377,3 +377,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.three.four.four
 141. 环形链表
   shuwei.leetcode.cn.one.four.one
+142. 环形链表 II(套圈算法)
+  shuwei.leetcode.cn.one.four.two
+416. 分割等和子集
+  shuwei.leetcode.cn.four.one.six
