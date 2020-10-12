@@ -383,3 +383,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.four.two
 416. 分割等和子集
   shuwei.leetcode.cn.four.one.six
+530. 二叉搜索树的最小绝对差
+  shuwei.leetcode.cn.five.three.zero
