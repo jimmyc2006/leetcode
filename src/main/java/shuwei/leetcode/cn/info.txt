@@ -387,3 +387,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.five.three.zero
 24. 两两交换链表中的节点
   shuwei.leetcode.cn.two.four
+1002. 查找常用字符
+  shuwei.leetcode.cn.one.zero.zero.two
