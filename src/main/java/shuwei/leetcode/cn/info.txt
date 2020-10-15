@@ -389,3 +389,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.two.four
 1002. 查找常用字符
   shuwei.leetcode.cn.one.zero.zero.two
+116. 填充每个节点的下一个右侧节点指针
+  shuwei.leetcode.cn.one.one.six
