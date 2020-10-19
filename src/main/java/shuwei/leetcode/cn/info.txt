@@ -391,6 +391,10 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.zero.zero.two
 116. 填充每个节点的下一个右侧节点指针
   shuwei.leetcode.cn.one.one.six
+977. 有序数组的平方
+  shuwei.leetcode.cn.nine.seven.seven
+52. N皇后 II 10-17
+  shuwei.leetcode.cn.five.two
 977. 有序数组的平方-1019
   shuwei.leetcode.cn.nine.seven.seven
 844. 比较含退格的字符串
