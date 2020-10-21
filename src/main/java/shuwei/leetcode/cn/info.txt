@@ -399,3 +399,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.nine.seven.seven
 844. 比较含退格的字符串
   shuwei.leetcode.cn.eight.four.four
+143. 重排链表-1020
+  shuwei.leetcode.cn.one.four.three
+925. 长按键入-1021
+  shuwei.leetcode.cn.nine.two.five
