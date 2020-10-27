@@ -413,3 +413,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.eight.four.five
 1365. 有多少小于当前数字的数字-1026
   shuwei.leetcode.cn.one.three.six.five
+144. 二叉树的前序遍历-1027
+  shuwei.leetcode.cn.one.four.four
