@@ -419,5 +419,9 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.two.zero.seven
 129. 求根到叶子节点数字之和-1029
   shuwei.leetcode.cn.one.zero.two.nine
-463. 岛屿的周长
+463. 岛屿的周长-1030
   shuwei.leetcode.cn.four.six.three
+381. O(1) 时间插入、删除和获取随机元素 - 允许重复-1031
+  shuwei.leetcode.cn.three.eight.one
+140. 单词拆分 II - 1101-字典树+LinkedList使用
+  shuwei.leetcode.cn.one.four.zero
