@@ -431,3 +431,9 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.nine.four.one
 57. 插入区间-1104
   shuwei.leetcode.cn.five.seven
+127. 单词接龙
+  shuwei.leetcode.cn.one.two.seven
+1356. 根据数字二进制下 1 的数目排序-1106
+  shuwei.leetcode.cn.one.three.five.six
+327. 区间和的个数-1107(比较困难还未自己实现)
+  shuwei.leetcode.cn.one.one.zero.seven
