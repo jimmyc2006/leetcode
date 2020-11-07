@@ -1,63 +1,64 @@
 package shuwei.leetcode.cn.one.one.zero.seven;
 
+import java.util.Arrays;
+
 public class Solution {
 
   public int countRangeSum(int[] nums, int lower, int upper) {
-    long s = 0;
-    long[] sum = new long[nums.length + 1];
-    for (int i = 0; i < nums.length; ++i) {
-      s += nums[i];
-      sum[i + 1] = s;
+    if (nums.length < 1) {
+      return 0;
     }
-    return countRangeSumRecursive(sum, lower, upper, 0, sum.length - 1);
+    if (nums.length == 1) {
+      return nums[0] >= lower && nums[0] <= upper ? 1 : 0;
+    }
+    long[] preSum = new long[nums.length];
+    preSum[0] = nums[0];
+    for (int i = 1; i < nums.length; i++) {
+      preSum[i] = preSum[i - 1] + nums[i];
+    }
+    return cal(preSum, 0, preSum.length - 1, lower, upper);
   }
 
-  public int countRangeSumRecursive(long[] sum, int lower, int upper, int left, int right) {
-    if (left == right) {
-      return 0;
-    } else {
-      int mid = (left + right) / 2;
-      int n1 = countRangeSumRecursive(sum, lower, upper, left, mid);
-      int n2 = countRangeSumRecursive(sum, lower, upper, mid + 1, right);
-      int ret = n1 + n2;
-
-      // 首先统计下标对的数量
-      int i = left;
-      int l = mid + 1;
-      int r = mid + 1;
-      while (i <= mid) {
-        while (l <= right && sum[l] - sum[i] < lower) {
-          l++;
-        }
-        while (r <= right && sum[r] - sum[i] <= upper) {
-          r++;
-        }
-        ret += r - l;
-        i++;
-      }
-
-      // 随后合并两个排序数组
-      int[] sorted = new int[right - left + 1];
-      int p1 = left, p2 = mid + 1;
-      int p = 0;
-      while (p1 <= mid || p2 <= right) {
-        if (p1 > mid) {
-          sorted[p++] = (int) sum[p2++];
-        } else if (p2 > right) {
-          sorted[p++] = (int) sum[p1++];
-        } else {
-          if (sum[p1] < sum[p2]) {
-            sorted[p++] = (int) sum[p1++];
-          } else {
-            sorted[p++] = (int) sum[p2++];
-          }
-        }
-      }
-      for (int j = 0; j < sorted.length; j++) {
-        sum[left + j] = sorted[j];
-      }
-      return ret;
+  // 包含start，包含end
+  // 采用内部修改数组值，返回符合条件的结果的方式
+  private int cal(long[] preSum, int start, int end, int lower, int upper) {
+    if (start == end) {
+      return preSum[start] >= lower && preSum[start] <= upper ? 1 : 0;
     }
+    int ans = 0;
+    int mid = start + (end - start) / 2;
+    int left = cal(preSum, start, mid, lower, upper);
+    int right = cal(preSum, mid + 1, end, lower, upper);
+    // 算自己
+    int leftIndex = mid + 1;
+    int rigthIndex = mid + 1;
+    for (int i = start; i <= mid; i++) {
+      while (leftIndex <= end && preSum[leftIndex] - preSum[i] < lower) {
+        leftIndex++;
+      }
+      while (rigthIndex <= end && preSum[rigthIndex] - preSum[i] <= upper) {
+        rigthIndex++;
+      }
+      if (rigthIndex > leftIndex) {
+        ans += rigthIndex - leftIndex;
+      }
+      // 改变顺序
+    }
+    long[] leftData = Arrays.copyOfRange(preSum, start, mid + 1);
+    long[] rightData = Arrays.copyOfRange(preSum, mid + 1, end + 1);
+    int lInd = 0, rInd = 0;
+    for (int i = start; i <= end; i++) {
+      if (lInd == leftData.length) {
+        preSum[i] = rightData[rInd++];
+      } else if (rInd == rightData.length) {
+        preSum[i] = leftData[lInd++];
+      } else if (leftData[lInd] < rightData[rInd]) {
+        preSum[i] = leftData[lInd++];
+      } else {
+        preSum[i] = rightData[rInd++];
+      }
+    }
+    return ans + left + right;
   }
 
 }
