@@ -1,37 +1,41 @@
 package shuwei.leetcode.cn.mst.five.one;
 
+import java.util.Arrays;
+
 public class Solution {
+
+  // 由于返回新数组的时候，需要使用一个全局变量来记录结果，所以本次采用单步返回结果的方式
+  // 需要对原有数组进行操作
   public int reversePairs(int[] nums) {
-    if (nums == null || nums.length < 1) {
+    if (nums.length < 2) {
       return 0;
     }
-    ans = 0;
-    mergeSort(nums, 0, nums.length - 1);
-    return ans;
+    return merge(nums, 0, nums.length - 1);
   }
 
-  int ans;
-  // 包含start和end, 使用内部返回新数组的方法-2, 4, 3, 5, 1
-  private int[] mergeSort(int[] nums, int start, int end) {
+  private int merge(int[] nums, int start, int end) {
     if (start == end) {
-      return new int[]{nums[start]};
+      return 0;
     }
     int mid = start + (end - start) / 2;
-    int[] left = mergeSort(nums, start, mid);
-    int[] right = mergeSort(nums, mid + 1, end);
-    int rightLength = right.length;
-    int[] result = new int[left.length + rightLength];
-    int i = 0, j = 0, index = 0;
-    while (i < left.length || j < rightLength) {
-      if (i == left.length) {
-        result[index++] = right[j++];
-      } else if(j == rightLength || left[i] <= right[j]) {
-        result[index++] = left[i++];
-        ans += j;
+    int leftCount = merge(nums, start, mid);
+    int rightCount = merge(nums, mid + 1, end);
+    int currCount = 0;
+    int[] leftArr = Arrays.copyOfRange(nums, start, mid + 1);
+    int[] rightArr = Arrays.copyOfRange(nums, mid + 1, end + 1);
+    int leftIndex = 0, rightIndex = 0;
+    for (int i = start; i <= end; i++) {
+      if (leftIndex == leftArr.length) {
+        nums[i] = rightArr[rightIndex++];
+      } else if (rightIndex == rightArr.length) {
+        nums[i] = leftArr[leftIndex++];
+      } else if (leftArr[leftIndex] <= rightArr[rightIndex]) {
+        nums[i] = leftArr[leftIndex++];
       } else {
-        result[index++] = right[j++];
+        currCount += leftArr.length - leftIndex;
+        nums[i] = rightArr[rightIndex++];
       }
     }
-    return result;
+    return leftCount + rightCount + currCount;
   }
 }
