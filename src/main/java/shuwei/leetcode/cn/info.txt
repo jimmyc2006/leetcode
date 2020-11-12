@@ -443,3 +443,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.nine.seven.three
 31. 下一个排列-1110
   shuwei.leetcode.cn.three.one
+514. 自由之路-1112
+  shuwei.leetcode.cn.five.one.four
+922. 按奇偶排序数组 II-1112
+  shuwei.leetcode.cn.nine.two.two
