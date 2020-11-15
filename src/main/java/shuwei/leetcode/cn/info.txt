@@ -451,3 +451,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.three.two.eight
 1122. 数组的相对排序-1114
   shuwei.leetcode.cn.one.one.two.two
+402. 移掉K位数字-1115
+  shuwei.leetcode.cn.four.zero.two
