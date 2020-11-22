@@ -463,5 +463,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.two.eight.three
 147. 对链表进行插入排序-1120(虚拟头部的使用和思路)
   shuwei.leetcode.cn.one.four.seven
-148. 排序链表-1121
+148. 排序链表-1121(dummy head 快慢指针)
   shuwei.leetcode.cn.one.four.eight
+242. 有效的字母异位词-1122
+  shuwei.leetcode.cn.two.four.two
