@@ -6,9 +6,37 @@ import java.util.Comparator;
 public class Solution {
 
   /**
-   * 有重叠区域的气球可以一起处理，不过会有这样的问题[1,4],[1,2],[3,5],[5,6] 如果把[1,4]和[3,5]放在一起则是不正确的 能否考虑先排序，然后从一边往另一边处理？
+   * 先根据每个气球的右边界排序，然后尝试挨个戳破每个气球的右边届
    */
   public int findMinArrowShots(int[][] points) {
+    Arrays.sort(points, new Comparator<int[]>() {
+      @Override
+      public int compare(int[] o1, int[] o2) {
+        if (o1[1] < o2[1]) {
+          return -1;
+        } else {
+          return 1;
+        }
+      }
+    });
+    int length = points.length;
+    int ans = 0;
+    for (int i = 0; i < length; ) {
+      ans++;
+      int chuo = points[i][1];
+      while (++i < length) {
+        if (points[i][0] > chuo) {
+          break;
+        }
+      }
+    }
+    return ans;
+  }
+
+  /**
+   * 有重叠区域的气球可以一起处理，不过会有这样的问题[1,4],[1,2],[3,5],[5,6] 如果把[1,4]和[3,5]放在一起则是不正确的 能否考虑先排序，然后从一边往另一边处理？
+   */
+  public int findMinArrowShots1(int[][] points) {
     if (points.length < 1) {
       return 0;
     }
