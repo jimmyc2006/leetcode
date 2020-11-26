@@ -471,3 +471,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.four.five.two
 222. 完全二叉树的节点个数-1124
   shuwei.leetcode.cn.two.two.two
+1370. 上升下降字符串-1125
+  shuwei.leetcode.cn.one.three.seven.zero
+164. 最大间距-1126桶排序，思路有点绕
+  shuwei.leetcode.cn.one.six.four
