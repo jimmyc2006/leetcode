@@ -475,3 +475,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.three.seven.zero
 164. 最大间距-1126桶排序，思路有点绕
   shuwei.leetcode.cn.one.six.four
+454. 四数相加 II- 1128 - 方法需要改进
+  shuwei.leetcode.cn.four.five.four
+493. 翻转对-1128（没看答案，有个转换公式弄错了）
+  shuwei.leetcode.cn.four.nine.three
