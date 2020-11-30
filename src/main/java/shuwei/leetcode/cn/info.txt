@@ -479,3 +479,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.four.five.four
 493. 翻转对-1128（没看答案，有个转换公式弄错了）
   shuwei.leetcode.cn.four.nine.three
+976. 三角形的最大周长-1129 - 这个题比较取巧，开始没有想到
+  shuwei.leetcode.cn.nine.seven.six
+767. 重构字符串-1130
+  shuwei.leetcode.cn.seven.six.seven
