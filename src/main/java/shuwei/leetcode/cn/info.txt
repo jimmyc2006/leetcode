@@ -483,3 +483,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.nine.seven.six
 767. 重构字符串-1130
   shuwei.leetcode.cn.seven.six.seven
+34. 在排序数组中查找元素的第一个和最后一个位置-1201(二分查找)
+  shuwei.leetcode.cn.three.four
