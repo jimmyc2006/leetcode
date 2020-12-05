@@ -487,3 +487,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.three.four
 204. 计数质数-1203
   shuwei.leetcode.cn.two.zero.four
+621. 任务调度器 1205(自己的思路不好，需要再看下)
+  shuwei.leetcode.cn.six.two.one
