@@ -495,3 +495,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.six.two.one
 861. 翻转矩阵后的得分
   shuwei.leetcode.cn.eight.six.one
+842. 将数组拆分成斐波那契序列1208(思路)
+  shuwei.leetcode.cn.eight.four.two
