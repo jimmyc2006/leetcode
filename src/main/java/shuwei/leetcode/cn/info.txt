@@ -503,5 +503,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.six.two
 860. 柠檬水找零1210
   shuwei.leetcode.cn.eight.six.zero
+649. Dota2 参议院
+  shuwei.leetcode.cn.six.four.nine
 376. 摆动序列1212
   shuwei.leetcode.cn.three.seven.six
