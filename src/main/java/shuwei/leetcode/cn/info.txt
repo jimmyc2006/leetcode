@@ -511,3 +511,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.two.one.seven
 49. 字母异位词分组1214(看了答案)
   shuwei.leetcode.cn.four.nine
+738. 单调递增的数字1215
+  shuwei.leetcode.cn.seven.three.eight
+290. 单词规律1216(简单)
+  shuwei.leetcode.cn.two.nine.zero
