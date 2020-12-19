@@ -517,3 +517,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.two.nine.zero
 714. 买卖股票的最佳时机含手续费1217(经过半个多小时的思考写出一个dp，但是速度不够快)
   shuwei.leetcode.cn.seven.one.four
+389. 找不同 1218
+  shuwei.leetcode.cn.one.two.one.eight
+48. 旋转图像1219
+  shuwei.leetcode.cn.four.eight
