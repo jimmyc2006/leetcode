@@ -523,3 +523,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.four.eight
 316. 去除重复字母1220这个做的比较坎坷，需要重复思考
   shuwei.leetcode.cn.three.one.six
+746. 使用最小花费爬楼梯1221简单的dp
+  shuwei.leetcode.cn.seven.four.six
+103. 二叉树的锯齿形层序遍历-1222比较简单的广度优先
+  shuwei.leetcode.cn.one.zero.three
