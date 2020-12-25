@@ -529,3 +529,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.zero.three
 387. 字符串中的第一个唯一字符1223 这个题做过，简单
   shuwei.leetcode.cn.three.eight.seven
+135. 分发糖果1224思考
+  shuwei.leetcode.cn.one.three.five
+455. 分发饼干1225
+  shuwei.leetcode.cn.four.five.five
