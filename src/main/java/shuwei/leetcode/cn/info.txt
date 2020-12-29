@@ -537,5 +537,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.eight.five
 205. 同构字符串1227注意反向,错过2次
   shuwei.leetcode.cn.two.zero.five
-188. 买卖股票的最佳时机 IV
+188. 买卖股票的最佳时机 IV 困难 思路不太对
   shuwei.leetcode.cn.one.eight.eight
+330. 按要求补齐数组，困难，但是思路想通了不难
+  shuwei.leetcode.cn.three.three.zero
