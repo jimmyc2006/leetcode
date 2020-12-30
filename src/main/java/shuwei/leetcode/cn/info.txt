@@ -541,3 +541,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.eight.eight
 330. 按要求补齐数组，困难，但是思路想通了不难
   shuwei.leetcode.cn.three.three.zero
+1046. 最后一块石头的重量1230
+  shuwei.leetcode.cn.one.zero.four.six

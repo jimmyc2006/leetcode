@@ -19,4 +19,5 @@ public class KmpTest {
     Assert.assertEquals(2, kmp.kmpMatch("babceabcee", "bc"));
     Assert.assertEquals(6, kmp.kmpMatch("abxabcabcaby", "abcaby"));
   }
+
 }

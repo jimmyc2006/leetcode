@@ -31,7 +31,6 @@ public class UnsafeTest {
 
   /**
    * compate跟put类似，只是会多一个原值的操作
-   * @throws NoSuchFieldException
    */
   public static void testCas() throws NoSuchFieldException {
     User user = new User();
@@ -53,7 +52,7 @@ public class UnsafeTest {
     int baseOffset = unsafe.arrayBaseOffset(arr.getClass());
     int indexOffset = unsafe.arrayIndexScale(arr.getClass());
     System.out.println("init :" + Arrays.toString(arr));
-    unsafe.putInt(arr, baseOffset + indexOffset, 100);
+//    unsafe.putInt(arr, baseOffset + indexOffset, 100);
     System.out.println("after:" + Arrays.toString(arr));
   }
 
