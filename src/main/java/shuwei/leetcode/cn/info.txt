@@ -549,5 +549,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.six.zero.five
 239. 滑动窗口最大值（困难0102）用时比较久，比较有特点，需要定期复习
   shuwei.leetcode.cn.two.three.nine
-86. 分隔链表
+86. 分隔链表(中等0103较简单)
   shuwei.leetcode.cn.eight.six
