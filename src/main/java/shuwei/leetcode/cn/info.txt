@@ -553,3 +553,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.eight.six
 509. 斐波那契数(简单0104)
   shuwei.leetcode.cn.five.zero.nine
+830. 较大分组的位置(简单0105)
+  shuwei.leetcode.cn.eight.three.zero
