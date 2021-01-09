@@ -557,3 +557,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.eight.three.zero
 399. 除法求值(中等，0106自己写的能通过，有点慢)
   shuwei.leetcode.cn.three.nine.nine
+547. 省份数量
+  shuwei.leetcode.cn.five.four.seven
+189. 旋转数组
+  shuwei.leetcode.cn.one.eight.nine
