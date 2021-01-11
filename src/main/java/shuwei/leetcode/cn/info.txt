@@ -561,3 +561,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.five.four.seven
 189. 旋转数组
   shuwei.leetcode.cn.one.eight.nine
+123. 买卖股票的最佳时机 III(难度:困难 dp题使用原来的官方思路解决)0109，跟188基本相同
+  shuwei.leetcode.cn.one.two.three
+228. 汇总区间
+  shuwei.leetcode.cn.two.two.eight
