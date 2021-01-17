@@ -565,3 +565,15 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.two.three
 228. 汇总区间
   shuwei.leetcode.cn.two.two.eight
+1202. 交换字符串中的元素
+  shuwei.leetcode.cn.one.two.zero.two
+1203. 项目管理 0112
+  shuwei.leetcode.cn.one.two.zero.three
+1018. 可被 5 整除的二进制前缀 0114
+  shuwei.leetcode.cn.one.zero.one.eight
+947. 移除最多的同行或同列石头(动态连通+思路+有时候set没有list好)0115 思路的转变
+  shuwei.leetcode.cn.nine.four.seven
+803. 打砖块
+  shuwei.leetcode.cn.eight.zero.three
+1232. 缀点成线
+  shuwei.leetcode.cn.one.two.three.two
