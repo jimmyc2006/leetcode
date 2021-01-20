@@ -1,34 +1,29 @@
 package shuwei.leetcode.cn.six.eight.four;
-import java.util.stream.IntStream;
 
 public class Solution {
 
     public int[] findRedundantConnection(int[][] edges) {
         int length = edges.length;
-        Uniform uniform = new Uniform(length);
+        Uniform uniform = new Uniform(length +1);
         for (int[] ele : edges) {
-            if (uniform.isConnected(ele[0] - 1, ele[1] - 1)) {
-                return new int[]{ele[0], ele[1]};
+            if (uniform.isConnected(ele[0], ele[1])) {
+                return ele;
             } else {
-                uniform.union(ele[0] - 1, ele[1] - 1);
+                uniform.union(ele[0], ele[1]);
             }
         }
         return null;
     }
 }
 class Uniform {
+
     private int[] id;
-    private int[] sz;
-    private int count;
 
     public Uniform(int N) {
-        count = N;
-        id = IntStream.range(0, N).toArray();
-        sz = IntStream.range(0, N).toArray();
-    }
-
-    public int count() {
-        return count;
+        id = new int[N];
+        for (int i = 0 ; i < N; i++) {
+            id[i] = i;
+        }
     }
 
     public void union(int from, int to) {
@@ -37,26 +32,47 @@ class Uniform {
         if (i == j) {
             return;
         }
-        if (sz[i] < sz[j]) {
-            id[i] = j;
-            sz[j] += sz[i];
-        } else {
-            id[j] = i;
-            sz[i] += sz[j];
-        }
-        count--;
+        id[i] = j;
     }
 
     public int find(int p) {
-        int curr = p;
-        while (curr != id[curr]) {
-            curr = id[curr];
+        if(p != id[p]) {
+            id[p] = find(id[p]);
         }
-        id[p] = curr;
-        return curr;
+        return id[p];
     }
 
     public boolean isConnected(int p1, int p2) {
         return find(p1) == find(p2);
     }
 }
+/*
+public int[] findRedundantConnection(int[][] edges) {
+        int nodesCount = edges.length;
+        int[] parent = new int[nodesCount + 1];
+        for (int i = 1; i <= nodesCount; i++) {
+            parent[i] = i;
+        }
+        for (int i = 0; i < nodesCount; i++) {
+            int[] edge = edges[i];
+            int node1 = edge[0], node2 = edge[1];
+            if (find(parent, node1) != find(parent, node2)) {
+                union(parent, node1, node2);
+            } else {
+                return edge;
+            }
+        }
+        return new int[0];
+    }
+
+    public void union(int[] parent, int index1, int index2) {
+        parent[find(parent, index1)] = find(parent, index2);
+    }
+
+    public int find(int[] parent, int index) {
+        if (parent[index] != index) {
+            parent[index] = find(parent, parent[index]);
+        }
+        return parent[index];
+    }
+ */
