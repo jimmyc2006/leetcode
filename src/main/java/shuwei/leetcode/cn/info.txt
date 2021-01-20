@@ -569,6 +569,8 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.two.zero.two
 1203. 项目管理 0112
   shuwei.leetcode.cn.one.two.zero.three
+684. 冗余连接 0113
+    shuwei.leetcode.cn.six.eight.four
 1018. 可被 5 整除的二进制前缀 0114
   shuwei.leetcode.cn.one.zero.one.eight
 947. 移除最多的同行或同列石头(动态连通+思路+有时候set没有list好)0115 思路的转变
@@ -577,3 +579,9 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.eight.zero.three
 1232. 缀点成线
   shuwei.leetcode.cn.one.two.three.two
+721. 账户合并0118
+  shuwei.leetcode.cn.seven.two.one
+1584. 连接所有点的最小费用(自知思路不是最简单，但是一次通过，小惊喜，思路缜密^_^ 0119)
+  shuwei.leetcode.cn.one.five.eight.four
+628. 三个数的最大乘积
+  shuwei.leetcode.cn.six.twow.eight
