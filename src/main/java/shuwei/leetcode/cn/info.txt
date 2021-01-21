@@ -585,3 +585,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.five.eight.four
 628. 三个数的最大乘积
   shuwei.leetcode.cn.six.twow.eight
+1489. 找到最小生成树里的关键边和伪关键边0121(困难：克鲁斯卡尔最小路径算法，需要复习)
+  shuwei.leetcode.cn.one.four.eight.nine

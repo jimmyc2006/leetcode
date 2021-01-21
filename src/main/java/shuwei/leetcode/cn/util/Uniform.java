@@ -1,7 +1,5 @@
 package shuwei.leetcode.cn.util;
 
-import java.util.stream.IntStream;
-
 public class Uniform {
 
     private int[] id;
