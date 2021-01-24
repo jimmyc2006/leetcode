@@ -23,14 +23,15 @@ public class Uniform {
     return points[point];
   }
 
-  public void union(int p1, int p2) {
+  public boolean union(int p1, int p2) {
     int p1f = find(p1);
     int p2f = find(p2);
     if (p1f == p2f) {
-      return;
+      return false;
     }
     points[p1f] = p2f;
     group--;
+    return true;
   }
 
   public int getGroup() {
