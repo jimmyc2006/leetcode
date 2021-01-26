@@ -595,3 +595,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.six.seven.four
 959. 由斜杠划分区域0125(需要点思路的动态连接题)
   shuwei.leetcode.cn.nine.five.nine
+1128. 等价多米诺骨牌对的数量
+  shuwei.leetcode.cn.one.one.two.eight
