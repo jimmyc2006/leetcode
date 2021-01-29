@@ -601,3 +601,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.five.seven.nine
 724. 寻找数组的中心索引
   shuwei.leetcode.cn.seven.two.four
+1631. 最小体力消耗路径0129(中等动态连通性)
+  shuwei.leetcode.cn.one.six.three.one
