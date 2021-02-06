@@ -619,3 +619,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.six.four.three
 1423. 可获得的最大点数 0206(中等，思路的转变)
   shuwei.leetcode.cn.one.four.two.three
+643. 子数组最大平均数 I(简单)
+  shuwei.leetcode.cn.six.four.three
+1208. 尽可能使字符串相等(中等，弄出来效率不高，跟424一起看一下)
+  shuwei.leetcode.cn.one.two.zero.eight
