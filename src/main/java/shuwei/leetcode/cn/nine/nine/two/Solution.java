@@ -33,6 +33,12 @@ public class Solution {
         return ans;
     }
 
+    /**
+     * 比较精炼的方法，自己写的相同逻辑，会比较复杂,这个算法比较好
+     * @param A
+     * @param K
+     * @return
+     */
     int atMostKDistinct(int[] A, int K) {
         int len = A.length;
         int[] freq = new int[len + 1];
