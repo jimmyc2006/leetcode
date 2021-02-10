@@ -627,5 +627,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.six.six.five
 978. 最长湍流子数组0208(中等，相对简单)
   shuwei.leetcode.cn.nine.seven.eight
-992. K 个不同整数的子数组
+992. K 个不同整数的子数组0209(困难，变化问题的思路+滑动窗口求值,反复揣摩)
   shuwei.leetcode.cn.nine.nine.two

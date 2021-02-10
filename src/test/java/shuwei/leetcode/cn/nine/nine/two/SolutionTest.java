@@ -17,4 +17,11 @@ public class SolutionTest {
     Assert.assertEquals(8, s.subarraysWithKDistinct(new int[]{1, 1, 1, 3, 4}, 1));
   }
 
+  @Test
+  public void testCal() {
+    Solution s = new Solution();
+    Assert.assertEquals(12, s.atMostKDistinct(new int[]{1, 2, 1, 2, 3}, 2));
+    Assert.assertEquals(5, s.atMostKDistinct(new int[]{1, 2, 1, 2, 3}, 1));
+  }
+
 }

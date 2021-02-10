@@ -2,48 +2,64 @@ package shuwei.leetcode.cn.nine.nine.two;
 
 public class Solution {
 
-  public int subarraysWithKDistinct(int[] A, int K) {
-    int ans = 0;
-    int[] maxIndex = new int[A.length + 1];
-    for (int i = 0; i < maxIndex.length; i++) {
-      maxIndex[i] = -1;
+    public int subarraysWithKDistinct(int[] A, int K) {
+        return cal(A, K) - cal(A, K - 1);
     }
-    int curr = 0;
-    int start = 0, currCount = 0;
-    for (int i = 0; i < A.length; i++) {
-      if (maxIndex[A[i]] < start) {
-        currCount++;
-      }
-      if (currCount == K) {
-        ans++;
-        curr++;
-      }
-      if (currCount > K) {
-        // 从start往后找
-        for (int j = start; j < i; j++) {
-          if (maxIndex[A[j]] > j) {
-            curr = curr > 1 ? curr - 1 : 1;
-            ans += curr;
-          } else {
-            start = j + 1;
-            currCount = K;
-            curr = 1;
-            ans++;
-            break;
-          }
-        }
-      }
-      maxIndex[A[i]] = i;
-    }
-    if (currCount == K) {
-      for (int j = start; j < A.length; j++) {
-        if (maxIndex[A[j]] > j) {
-          curr = curr > 1 ? curr - 1 : 1;
-          ans += curr;
-        }
-      }
-    }
-    return ans;
-  }
 
+    int cal(int[] arr, int k) {
+        int length = arr.length;
+        int[] counts = new int[length + 1];
+        int start = 0, end = 0, ans = 0, currCount = 0;
+        while (end < length) {
+            counts[arr[end]]++;
+            if (counts[arr[end]] == 1) {
+                currCount++;
+            }
+            while (currCount > k) {
+                ans += end - start;
+                counts[arr[start]]--;
+                if (counts[arr[start]] == 0) {
+                    currCount--;
+                }
+                start++;
+            }
+            end++;
+        }
+        // 补充
+        while (start < end) {
+            ans += end - start;
+            start++;
+        }
+        return ans;
+    }
+
+    int atMostKDistinct(int[] A, int K) {
+        int len = A.length;
+        int[] freq = new int[len + 1];
+
+        int left = 0;
+        int right = 0;
+        // [left, right) 里不同整数的个数
+        int count = 0;
+        int res = 0;
+        // [left, right) 包含不同整数的个数小于等于 K
+        while (right < len) {
+            if (freq[A[right]] == 0) {
+                count++;
+            }
+            freq[A[right]]++;
+            right++;
+
+            while (count > K) {
+                freq[A[left]]--;
+                if (freq[A[left]] == 0) {
+                    count--;
+                }
+                left++;
+            }
+            // [left, right) 区间的长度就是对结果的贡献
+            res += right - left;
+        }
+        return res;
+    }
 }
