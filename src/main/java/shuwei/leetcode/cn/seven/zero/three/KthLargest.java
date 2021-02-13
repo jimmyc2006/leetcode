@@ -34,14 +34,19 @@ public class KthLargest {
         return stack[0];
     }
 
+    /**
+     * 优化了pop以后，还是108ms
+     */
     private void pop() {
+        int minIndex = 0;
         for (int i = 1; i < stack.length; i++) {
-            if (stack[i] < stack[0]) {
-                int tmp = stack[0];
-                stack[0] = stack[i];
-                stack[i] = tmp;
+            if (stack[i] < stack[minIndex]) {
+                minIndex = i;
             }
         }
+        int tmp = stack[0];
+        stack[0] = stack[minIndex];
+        stack[minIndex] = tmp;
     }
 
     /**
