@@ -641,9 +641,11 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.seven.six.five
 485. 最大连续1的个数0215(简单)
   shuwei.leetcode.cn.four.eight.five
-561. 数组拆分 I
+561. 数组拆分 I(简单)
   shuwei.leetcode.cn.five.six.one
-566. 重塑矩阵
+566. 重塑矩阵（简单）
   shuwei.leetcode.cn.five.six.six
-995. K 连续位的最小翻转次数0218（困难，异或勉强通过）
+995. K 连续位的最小翻转次数0218（困难，异或勉强通过,题解以后解出）
   shuwei.leetcode.cn.nine.nine.five
+1004. 最大连续1的个数 III
+  shuwei.leetcode.cn.one.zero.zero.four
