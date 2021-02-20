@@ -40,6 +40,8 @@ public class Solution {
     }
     return ans;
   }
+
+
   public int findShortestSubArray1(int[] nums) {
     Map<Integer, int[]> map = new HashMap<>();
     int max = 0;
