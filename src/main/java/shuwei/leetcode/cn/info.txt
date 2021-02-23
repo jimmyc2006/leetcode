@@ -649,3 +649,9 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.nine.nine.five
 1004. 最大连续1的个数 III
   shuwei.leetcode.cn.one.zero.zero.four
+1438. 绝对差不超过限制的最长连续子数组0219(中等，反复琢磨，单调队列)
+  shuwei.leetcode.cn.one.four.three.eight
+766. 托普利茨矩阵0222(简单，差点给想复杂了)
+  shuwei.leetcode.cn.seven.six.six
+1052. 爱生气的书店老板0223(中等，相对简单)
+  shuwei.leetcode.cn.one.zero.five.two
