@@ -655,3 +655,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.seven.six.six
 1052. 爱生气的书店老板0223(中等，相对简单)
   shuwei.leetcode.cn.one.zero.five.two
+832. 翻转图像0224(简单)
+  shuwei.leetcode.cn.eight.three.two

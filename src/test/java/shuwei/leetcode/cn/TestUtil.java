@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import org.junit.Assert;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -71,5 +73,12 @@ public class TestUtil {
       }
     }
     return null;
+  }
+
+  public static void assertArraysEquals(int[][] ar1, int[][] ar2) {
+    Assert.assertEquals(ar1.length, ar2.length);
+    for (int i = 0; i < ar1.length; i++) {
+      Assert.assertArrayEquals(ar1[i], ar2[i]);
+    }
   }
 }
