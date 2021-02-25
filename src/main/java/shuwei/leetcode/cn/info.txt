@@ -657,3 +657,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.zero.five.two
 832. 翻转图像0224(简单)
   shuwei.leetcode.cn.eight.three.two
+867. 转置矩阵
+  shuwei.leetcode.cn.eight.six.seven
