@@ -659,7 +659,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.eight.three.two
 867. 转置矩阵
   shuwei.leetcode.cn.eight.six.seven
-1178. 猜字谜0226(困难)
+1178. 猜字谜0226(困难) 遍历压缩字符的方法
   shuwei.leetcode.cn.one.one.seven.eight
 395. 至少有 K 个重复字符的最长子串
   shuwei.leetcode.cn.three.nine.five
@@ -671,3 +671,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.five.six.nine.zero
 5691. 通过最少操作次数使数组的和相等
   shuwei.leetcode.cn.five.six.nine.one
+303. 区域和检索 - 数组不可变0301(简单的前缀和)
+  shuwei.leetcode.cn.three.zero.three
