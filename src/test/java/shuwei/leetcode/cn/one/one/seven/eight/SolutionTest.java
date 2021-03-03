@@ -15,5 +15,6 @@ public class SolutionTest {
             new String[]{"aboveyz", "abrodyz", "abslute", "absoryz", "actresz", "gaswxyz"}));
     TestUtil.assertList(Arrays.asList(1), s.findNumOfValidWords(new String[]{"aaaa"},
             new String[]{"aboveyz"}));
+
   }
 }

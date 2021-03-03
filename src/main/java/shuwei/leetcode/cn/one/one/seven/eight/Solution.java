@@ -2,61 +2,72 @@ package shuwei.leetcode.cn.one.one.seven.eight;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Solution {
-
   /**
-   * 这个题是处理字符串去重后的数据 因为只涉及到有没有，并不涉及到数量问题 所以采用二进制压缩状态 int 有32位，足够放26个字母
-   * 由于要寻找，puzzles包含的，且被包含对象需要包含puzzles的第一个字符，采用将words入字典，然后每个puzzles直接匹配所有带它第一个字符的子集
+   * 根据题就思路二，领悟了某个字母可选可不选的时候，可以使用递归处理
+   * 其实仔细想想这个有点类似背包问题
+   * @param words
+   * @param puzzles
+   * @return
    */
+  private Trie root;
   public List<Integer> findNumOfValidWords(String[] words, String[] puzzles) {
-    Map<Integer, Integer> data = new HashMap<>();
+    root = new Trie();
+    // 构建字典树
     for (String word : words) {
-      int key = change(word, 0);
-      if (Integer.bitCount(key) <= 7) {
-        Integer val = data.get(key);
-        if (val == null) {
-          data.put(key, 1);
-        } else {
-          data.put(key, val + 1);
-        }
-      }
+      char[] chars = word.toCharArray();
+      Arrays.sort(chars);
+      add(chars);
     }
-    List<Integer> ans = new ArrayList<>();
-    // 查找
+    // 寻找答案
+    List<Integer> ans = new ArrayList<>(puzzles.length);
     for (String puzzle : puzzles) {
-      int currCount = 0;
-      int ci = change(puzzle, 1);
-      int mask = ci;
-      while (true) {
-        currCount += getCount(data, mask | (1 << (puzzle.charAt(0) - 'a')));
-        mask = (mask - 1) & ci;
-        if (mask == ci) {
-          break;
-        }
-      }
-      ans.add(currCount);
+      char[] chars = puzzle.toCharArray();
+      first = chars[0];
+      Arrays.sort(chars);
+      find = chars;
+      ans.add(find(0, root));
     }
     return ans;
   }
 
-  private int getCount(Map<Integer, Integer> data, Integer key) {
-    Integer res = data.get(key);
-    if (res != null) {
-      return res;
-    } else {
+  private char[] find;
+  private char first;
+  private int find(int index, Trie node) {
+    if (node == null) {
       return 0;
+    }
+    if (index == find.length) {
+      return node.counts;
+    }
+    if (find[index] == first) {
+      return find(index + 1, node.children[first - 'a']);
+    } else {
+      return find(index + 1, node) + find(index + 1, node.children[find[index] - 'a']);
     }
   }
 
-  private int change(String str, int start) {
-    int result = 0;
-    for (int i = start; i < str.length(); i++) {
-      result = result | (1 << str.charAt(i) - 'a');
+
+  private void add (char[] chars) {
+    Trie node = root;
+    for (int i = 0; i < chars.length; i++) {
+      if (i > 0 && chars[i] == chars[i - 1]) {
+        continue;
+      }
+      int index = chars[i] - 'a';
+      if (node.children[index] == null) {
+        node.children[index] = new Trie();
+      }
+      node = node.children[index];
     }
-    return result;
+    node.counts++;
+  }
+
+  class Trie {
+    int counts = 0;
+    private Trie[] children = new Trie[26];
   }
 }
+
