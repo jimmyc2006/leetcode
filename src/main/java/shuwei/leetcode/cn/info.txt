@@ -675,5 +675,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.three.zero.three
 304. 二维区域和检索 - 矩阵不可变0302(中等，前缀和)
   shuwei.leetcode.cn.three.zero.four
-338. 比特位计数
+338. 比特位计数0303（中等，ac，但是效率不算高）
   shuwei.leetcode.cn.three.three.eight
+354. 俄罗斯套娃信封问题0304(困难，2中方法ac，但是效率都不高)
+  shuwei.leetcode.cn.three.five.four
