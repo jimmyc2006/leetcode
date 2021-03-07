@@ -679,3 +679,11 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.three.three.eight
 354. 俄罗斯套娃信封问题0304(困难，2中方法ac，但是效率都不高)
   shuwei.leetcode.cn.three.five.four
+232. 用栈实现队列0305(简单)
+  shuwei.leetcode.cn.two.three.two
+300. 最长递增子序列0305(中等，速度不够,)
+  shuwei.leetcode.cn.three.zero.zero
+503. 下一个更大元素 II
+  shuwei.leetcode.cn.five.zero.three
+131. 分割回文串0307(中等，自己的算法能ac，但是慢0307)
+  shuwei.leetcode.cn.one.three.one
