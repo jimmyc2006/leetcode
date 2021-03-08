@@ -1,46 +1,44 @@
 package shuwei.leetcode.cn.one.three.one;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Arrays;
 import java.util.List;
 
-public class Solution {
+class Solution {
+
+  boolean[][] f;
+  List<List<String>> ret = new ArrayList<List<String>>();
+  List<String> ans = new ArrayList<String>();
+  int n;
 
   public List<List<String>> partition(String s) {
-    this.s = s;
-    ans = new ArrayList<>();
-    length = s.length();
-    content = s.toCharArray();
-    middleResult = new LinkedList();
-    deal(0);
-    return ans;
+    n = s.length();
+    f = new boolean[n][n];
+    for (int i = 0; i < n; ++i) {
+      Arrays.fill(f[i], true);
+    }
+
+    for (int i = n - 1; i >= 0; --i) {
+      for (int j = i + 1; j < n; ++j) {
+        f[i][j] = (s.charAt(i) == s.charAt(j)) && f[i + 1][j - 1];
+      }
+    }
+
+    dfs(s, 0);
+    return ret;
   }
 
-  private void deal(int start) {
-    if (start == length) {
-      ans.add((List<String>) middleResult.clone());
+  public void dfs(String s, int i) {
+    if (i == n) {
+      ret.add(new ArrayList<String>(ans));
+      return;
     }
-    for (int i = start + 1; i <= length; i++) {
-      if (isHuiwen(start, i)) {
-        middleResult.add(s.substring(start, i));
-        deal(i);
-        middleResult.removeLast();
+    for (int j = i; j < n; ++j) {
+      if (f[i][j]) {
+        ans.add(s.substring(i, j + 1));
+        dfs(s, j + 1);
+        ans.remove(ans.size() - 1);
       }
     }
   }
-
-  private boolean isHuiwen(int left, int right) {
-    for (int i = left, j = right - 1; i <= j ; i++, j--) {
-      if (content[i] != content[j]) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  private String s;
-  private List<List<String>> ans;
-  private int length;
-  private char[] content;
-  private LinkedList<String> middleResult;
 }

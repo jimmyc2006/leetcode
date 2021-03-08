@@ -687,3 +687,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.five.zero.three
 131. 分割回文串0307(中等，自己的算法能ac，但是慢0307)
   shuwei.leetcode.cn.one.three.one
+132. 分割回文串 II0308(困难，需要review并收集算法)
+  shuwei.leetcode.cn.one.three.two
