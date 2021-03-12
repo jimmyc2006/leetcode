@@ -695,3 +695,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.two.two.four
 227. 基本计算器 II 0311(中等还是做了半个多小时)
   shuwei.leetcode.cn.two.two.seven
+331. 验证二叉树的前序序列化0312(中等，找到规律后比较简单)
+  shuwei.leetcode.cn.three.three.one
