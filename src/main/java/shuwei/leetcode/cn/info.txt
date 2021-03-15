@@ -699,3 +699,15 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.three.three.one
 705. 设计哈希集合0313（简单）
   shuwei.leetcode.cn.seven.zero.five
+5701. 仅执行一次字符串交换能否使两个字符串相等
+  shuwei.leetcode.cn.five.seven.zero.one
+5702. 找出星型图的中心节点
+  shuwei.leetcode.cn.five.seven.zero.two
+5703. 最大平均通过率
+  shuwei.leetcode.cn.five.seven.zero.three
+5704. 好子数组的最大分数
+  shuwei.leetcode.cn.five.seven.zero.four
+706. 设计哈希映射0314（简单）
+  shuwei.leetcode.cn.seven.zero.six
+54. 螺旋矩阵0315(中等，相对简单)
+  shuwei.leetcode.cn.five.four
