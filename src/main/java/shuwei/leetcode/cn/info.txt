@@ -711,3 +711,9 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.seven.zero.six
 54. 螺旋矩阵0315(中等，相对简单)
   shuwei.leetcode.cn.five.four
+59. 螺旋矩阵 II 0316 （中等跟54相同）
+  shuwei.leetcode.cn.five.nine
+115. 不同的子序列
+  shuwei.leetcode.cn.one.one.five
+92. 反转链表 II0318（中等）
+  shuwei.leetcode.cn.nine.two
