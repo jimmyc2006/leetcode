@@ -727,3 +727,11 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.nine.one
 341. 扁平化嵌套列表迭代器 0323(中等，做出来但是没有写出来测试用例，速度慢)
   shuwei.leetcode.cn.three.four.one
+456. 132 模式 0324(中等)
+  shuwei.leetcode.cn.four.five.six
+83. 删除排序链表中的重复元素
+  shuwei.leetcode.cn.eight.three
+61. 旋转链表
+  shuwei.leetcode.cn.six.one
+173. 二叉搜索树迭代器0328（中等，投机取巧的方法，review）
+  shuwei.leetcode.cn.one.seven.three
