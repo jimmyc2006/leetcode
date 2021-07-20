@@ -627,7 +627,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.six.six.five
 978. 最长湍流子数组0208(中等，相对简单)
   shuwei.leetcode.cn.nine.seven.eight
-992. K 个不同整数的子数组0209(困难，变化问题的思路+滑动窗口求值,反复揣摩)
+992. K 个不同整数的子数组0209(困难，变化问题的思路+滑动窗口求值,反复揣摩) 2021020review，题解内化，并不完全等同题解的解法
   shuwei.leetcode.cn.nine.nine.two
 567. 字符串的排列0210(中等，比较标准的滑动窗口)
   shuwei.leetcode.cn.five.six.seven
@@ -641,7 +641,105 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.seven.six.five
 485. 最大连续1的个数0215(简单)
   shuwei.leetcode.cn.four.eight.five
+<<<<<<< HEAD
 561. 数组拆分 I
   shuwei.leetcode.cn.five.six.one
 82. 删除排序链表中的重复元素 II
   shuwei.leetcode.cn.eight.two
+=======
+561. 数组拆分 I(简单)
+  shuwei.leetcode.cn.five.six.one
+566. 重塑矩阵（简单）
+  shuwei.leetcode.cn.five.six.six
+995. K 连续位的最小翻转次数0218（困难，异或勉强通过,题解以后解出）
+  shuwei.leetcode.cn.nine.nine.five
+1004. 最大连续1的个数 III
+  shuwei.leetcode.cn.one.zero.zero.four
+1438. 绝对差不超过限制的最长连续子数组0219(中等，反复琢磨，单调队列)
+  shuwei.leetcode.cn.one.four.three.eight
+766. 托普利茨矩阵0222(简单，差点给想复杂了)
+  shuwei.leetcode.cn.seven.six.six
+1052. 爱生气的书店老板0223(中等，相对简单)
+  shuwei.leetcode.cn.one.zero.five.two
+832. 翻转图像0224(简单)
+  shuwei.leetcode.cn.eight.three.two
+867. 转置矩阵
+  shuwei.leetcode.cn.eight.six.seven
+1178. 猜字谜0226(困难) 遍历压缩字符的方法
+  shuwei.leetcode.cn.one.one.seven.eight
+395. 至少有 K 个重复字符的最长子串
+  shuwei.leetcode.cn.three.nine.five
+896. 单调数列
+  shuwei.leetcode.cn.eight.nine.six
+5689. 统计匹配检索规则的物品数量
+  shuwei.leetcode.cn.five.six.eight.nine
+5690. 最接近目标价格的甜点成本
+  shuwei.leetcode.cn.five.six.nine.zero
+5691. 通过最少操作次数使数组的和相等
+  shuwei.leetcode.cn.five.six.nine.one
+303. 区域和检索 - 数组不可变0301(简单的前缀和)
+  shuwei.leetcode.cn.three.zero.three
+304. 二维区域和检索 - 矩阵不可变0302(中等，前缀和)
+  shuwei.leetcode.cn.three.zero.four
+338. 比特位计数0303（中等，ac，但是效率不算高）
+  shuwei.leetcode.cn.three.three.eight
+354. 俄罗斯套娃信封问题0304(困难，2中方法ac，但是效率都不高)
+  shuwei.leetcode.cn.three.five.four
+232. 用栈实现队列0305(简单)
+  shuwei.leetcode.cn.two.three.two
+300. 最长递增子序列0305(中等，速度不够,)
+  shuwei.leetcode.cn.three.zero.zero
+503. 下一个更大元素 II
+  shuwei.leetcode.cn.five.zero.three
+131. 分割回文串0307(中等，自己的算法能ac，但是慢0307)
+  shuwei.leetcode.cn.one.three.one
+132. 分割回文串 II0308(困难，需要review并收集算法)
+  shuwei.leetcode.cn.one.three.two
+1047. 删除字符串中的所有相邻重复项0309（简单）
+  shuwei.leetcode.cn.one.zero.four.seven
+224. 基本计算器0310(困难,beat6.12%-review)
+  shuwei.leetcode.cn.two.two.four
+227. 基本计算器 II 0311(中等还是做了半个多小时)
+  shuwei.leetcode.cn.two.two.seven
+331. 验证二叉树的前序序列化0312(中等，找到规律后比较简单)
+  shuwei.leetcode.cn.three.three.one
+705. 设计哈希集合0313（简单）
+  shuwei.leetcode.cn.seven.zero.five
+5701. 仅执行一次字符串交换能否使两个字符串相等
+  shuwei.leetcode.cn.five.seven.zero.one
+5702. 找出星型图的中心节点
+  shuwei.leetcode.cn.five.seven.zero.two
+5703. 最大平均通过率
+  shuwei.leetcode.cn.five.seven.zero.three
+5704. 好子数组的最大分数
+  shuwei.leetcode.cn.five.seven.zero.four
+706. 设计哈希映射0314（简单）
+  shuwei.leetcode.cn.seven.zero.six
+54. 螺旋矩阵0315(中等，相对简单)
+  shuwei.leetcode.cn.five.four
+59. 螺旋矩阵 II 0316 （中等跟54相同）
+  shuwei.leetcode.cn.five.nine
+115. 不同的子序列
+  shuwei.leetcode.cn.one.one.five
+92. 反转链表 II0318（中等）
+  shuwei.leetcode.cn.nine.two
+1603. 设计停车系统 0319(简单)
+  shuwei.leetcode.cn.one.six.zero.three
+150. 逆波兰表达式求值 0320(中等，但是简单)
+  shuwei.leetcode.cn.one.five.zero
+73. 矩阵置零0322(中等，自己实现不实用额外空间)
+  shuwei.leetcode.cn.seven.three
+191. 位1的个数 0322(简单，现成的方法)
+  shuwei.leetcode.cn.one.nine.one
+341. 扁平化嵌套列表迭代器 0323(中等，做出来但是没有写出来测试用例，速度慢)
+  shuwei.leetcode.cn.three.four.one
+456. 132 模式 0324(中等)
+  shuwei.leetcode.cn.four.five.six
+83. 删除排序链表中的重复元素
+  shuwei.leetcode.cn.eight.three
+61. 旋转链表
+  shuwei.leetcode.cn.six.one
+173. 二叉搜索树迭代器0328（中等，投机取巧的方法，review）
+  shuwei.leetcode.cn.one.seven.three
+2021-07-20 1838. 最高频元素的频数
+  shuwei.leetcode.cn.one.eight.three.eight
