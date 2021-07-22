@@ -743,3 +743,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.seven.three
 2021-07-20 1838. 最高频元素的频数
   shuwei.leetcode.cn.one.eight.three.eight
+2021-07-21 剑指 Offer 52. 两个链表的第一个公共节点
+  shuwei.leetcode.cn.jianzhi.five.two
+2021-07-22 138. 复制带随机指针的链表 (先复制后关联)
+  shuwei.leetcode.cn.one.three.eight
