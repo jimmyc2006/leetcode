@@ -747,3 +747,5 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.jianzhi.five.two
 2021-07-22 138. 复制带随机指针的链表 (先复制后关联)
   shuwei.leetcode.cn.one.three.eight
+2021-07-23 1893. 检查是否区域内所有整数都被覆盖
+  shuwei.leetcode.cn.one.eight.nine.three
