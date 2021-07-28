@@ -61,6 +61,21 @@ public class TreeNode {
         return root;
     }
 
+    public TreeNode findByValue(int val) {
+        if (this.val == val) {
+            return this;
+        }
+        TreeNode result = null;
+        if (this.left != null) {
+            result = this.left.findByValue(val);
+        }
+        if (result  == null) {
+            result = this.right.findByValue(val);
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
         TreeNode root2 = TreeNode.gen("-10,9,20,null,null,15,7");
         System.out.print(root2);

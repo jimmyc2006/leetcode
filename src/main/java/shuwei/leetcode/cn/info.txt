@@ -749,3 +749,7 @@ LCP 19. 秋叶收藏集(自己的解法超时，题解的dp，基于状态的dp�
   shuwei.leetcode.cn.one.three.eight
 2021-07-23 1893. 检查是否区域内所有整数都被覆盖
   shuwei.leetcode.cn.one.eight.nine.three
+2021-07-27 671. 二叉树中第二小的节点
+  shuwei.leetcode.cn.six.seven.one
+2021-07-27 863. 二叉树中所有距离为 K 的结点
+  shuwei.leetcode.cn.eight.six.three
