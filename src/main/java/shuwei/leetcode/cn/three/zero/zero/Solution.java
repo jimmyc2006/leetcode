@@ -1,13 +1,49 @@
 package shuwei.leetcode.cn.three.zero.zero;
 
 public class Solution {
+
+  /**
+   * 复习,贪心：用d[1]表示最长为i的时候，最小的数，贪心就是让相同长度的子序列的最后一个元素尽量小
+   *
+   * @return
+   */
+  public int lengthOfLIS(int[] nums) {
+    int[] d = new int[nums.length + 1];
+    d[1] = nums[0];
+    int index = 2;
+    for (int i = 1; i < nums.length; i++) {
+      int biggerThan = findBiggerThan(d, 1, index, nums[i]);
+      if (biggerThan == index) {
+        d[index++] = nums[i];
+      } else {
+        d[biggerThan] = nums[i];
+      }
+    }
+    return index - 1;
+  }
+
+  // 找到刚好比val大的
+  private int findBiggerThan(int[] d, int start, int end, int val) {
+    if (start == end) {
+      return end;
+    }
+    int mid = (start + end) / 2;
+    if (d[mid] == val) {
+      return mid;
+    } else if (d[mid] < val) {
+      return findBiggerThan(d, mid + 1, end, val);
+    } else {
+      return findBiggerThan(d, start, mid, val);
+    }
+  }
+
   /**
    * 题解的算法1的dp自己已写出，这个是题解的贪心+二分算法，这是个比较神奇的算法，需要好好体会这种算法
    * 或者多体会贪心算法，总是用后面的数替换第一个比它大的数，如果没有就添加
    * @param nums
    * @return
    */
-  public int lengthOfLIS(int[] nums) {
+  public int lengthOfLIS_b(int[] nums) {
     int[] d = new int[nums.length];
     d[0] = nums[0];
     int len = 1;
